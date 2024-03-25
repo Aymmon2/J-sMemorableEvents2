@@ -8,11 +8,7 @@
 		<meta name="description" content="">
 		<meta name='copyright' content=''>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-		<!-- Title -->
         <title>J'S MEMORABLE EVENTS</title>
-
-		<!-- Favicon -->
         <link rel="icon" href="img/JSmemorableLogo.png">
 
 		<!-- Google Fonts -->
@@ -105,7 +101,7 @@
 											<li><a href="#">About Us </a></li>
 											<li><a href="#">Services </a></li>
 											<li><a href="#">Contact Us</a></li>
-                                            <li><a href="#" id="loginLink" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                                            <li><a href="{{ route('login') }}">Login</a></li>
 
 										</ul>
 									</nav>
