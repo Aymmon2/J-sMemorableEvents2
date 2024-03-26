@@ -27,8 +27,6 @@
 		<link rel="stylesheet" href="css/slicknav.min.css">
 		<!-- Owl Carousel CSS -->
         <link rel="stylesheet" href="css/owl-carousel.css">
-		<!-- Datepicker CSS -->
-		<link rel="stylesheet" href="css/datepicker.css">
 		<!-- Animate CSS -->
         <link rel="stylesheet" href="css/animate.min.css">
 
@@ -50,22 +48,19 @@
 			<div class="topbar">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-3 col-md-5 col-12">
-							<!-- Contact -->
-							<ul class="top-link">
-								<li><a href="#">About</a></li>
-								<li><a href="#">Contact</a></li>
-								<li><a href="#">FAQ</a></li>
 
-							</ul>
-							<!-- End Contact -->
-						</div>
-						<div class="col-lg-9 col-md-7 col-12">
+						<div class="col-lg-12 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>+123 1234 56789</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">sample@yourmail.com</a></li>
+                                <li><i class="fa fa-phone"></i>+123 1234 56789</li>
+                                <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">sample@yourmail.com</a></li>
                                 <li><i class="icofont-instagram"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                <li><i class="icofont-facebook"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC0CB" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
+                                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                                        </svg>
+                                  <a href="https://www.tiktok.com/@js_memorable_events">js_memorable_events</a></li>
+
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -621,34 +616,27 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-12 col-12">
-						<form class="form" action="#">
+						<form class="form" action="{{ route('submit-form') }}" method="POST">
+                            @csrf
 							<div class="row">
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
 										<input name="name" type="text" placeholder="Name">
 									</div>
 								</div>
-								<div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="email" type="email" placeholder="Email">
+										<input name="date" type="date">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="phone" type="text" placeholder="Phone">
+										<input name="occasion" type="text" placeholder="Occasion">
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<div class="nice-select form-control wide" tabindex="0"><span class="current">Bundles</span>
-											<ul class="list">
-												<li data-value="1" class="option selected ">Bundles</li>
-												<li data-value="2" class="option">sample Bundles1</li>
-												<li data-value="3" class="option">sample Bundles2</li>
-												<li data-value="4" class="option">sample Bundles3</li>
-												<li data-value="5" class="option">sample Bundles4</li>
-											</ul>
-										</div>
+										<input name="themecolors" type="text" placeholder="Theme Colors">
 									</div>
 								</div>
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -656,14 +644,15 @@
 										<input name="event" type="text" placeholder="Events">
 									</div>
 								</div>
-								<div class="col-lg-6 col-md-6 col-12">
+                                <div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input type="text" placeholder="Date" id="datepicker">
+										<input name="people" type="text" placeholder="How Many People">
 									</div>
 								</div>
+
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
-										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
+										<textarea name="message" placeholder="Please Specify exactly what is needed"></textarea>
 									</div>
 								</div>
 							</div>
@@ -781,8 +770,6 @@
 		<!-- Popper JS -->
 		<script src="js/popper.min.js"></script>
 		<!-- Bootstrap Datepicker JS -->
-		<script src="js/bootstrap-datepicker.js"></script>
-		<!-- Slicknav JS -->
 		<script src="js/slicknav.min.js"></script>
 		<!-- Niceselect JS -->
 		<script src="js/niceselect.js"></script>

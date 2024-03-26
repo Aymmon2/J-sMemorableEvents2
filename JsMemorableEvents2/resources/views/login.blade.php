@@ -73,8 +73,8 @@
         <img class="logo" src="img/JSmemorableLogo.png" alt="Logo">
         @csrf
         <div>
-            <label for="name">User Name</label>
-            <input id="name" type="text" name="name" required autofocus>
+            <label for="username">User Name</label>
+            <input id="username" type="text" name="username" required autofocus>
         </div>
 
         <div>
