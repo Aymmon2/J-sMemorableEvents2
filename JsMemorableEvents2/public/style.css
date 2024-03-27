@@ -1697,6 +1697,9 @@ body{
 /*==========================
 	Start Appointment CSS
 ============================*/
+::placeholder {
+    color: #d1cbcb; /* This is a lighter color */
+}
 .appointment{
 	background:#fff;
 	padding-top:100px;

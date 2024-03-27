@@ -17,9 +17,9 @@ class CreateAppointmentRequestsTable extends Migration
             $table->id();
             $table->string('name');
             $table->date('date');
+            $table->time('time');
             $table->string('occasion');
             $table->string('themecolors');
-            $table->string('event');
             $table->integer('people');
             $table->text('message');
             $table->timestamps();

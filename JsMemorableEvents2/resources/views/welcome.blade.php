@@ -96,7 +96,19 @@
 											<li><a href="#">About Us </a></li>
 											<li><a href="#">Services </a></li>
 											<li><a href="#">Contact Us</a></li>
-                                            <li><a href="{{ route('login') }}">Login</a></li>
+                                            @if(!Auth::check())
+                                                <li><a href="{{ route('login') }}">Login</a></li>
+                                            @endif
+                                            @if(Auth::check())
+                                                <li><a href="">C-Panel</a></li>
+                                            @endif
+                                            @if(Auth::check())
+                                            <li><form action="{{ route('logout') }}" method="post">
+                                                @csrf
+                                                <a href="#" onclick="event.preventDefault(); this.closest('form').submit();" style="cursor: pointer;">Logout</a>
+                                            </form></li>
+                                            @endif
+
 
 										</ul>
 									</nav>
@@ -620,39 +632,45 @@
                             @csrf
 							<div class="row">
 								<div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Name:</label>
 									<div class="form-group">
-										<input name="name" type="text" placeholder="Name">
+										<input name="name" type="text" placeholder="Name" required>
 									</div>
 								</div>
                                 <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Date of Event:</label>
 									<div class="form-group">
-										<input name="date" type="date">
+										<input name="date" type="date" required>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Occasion:</label>
 									<div class="form-group">
-										<input name="occasion" type="text" placeholder="Occasion">
+										<input name="occasion" type="text" placeholder="Occasion" required>
 									</div>
 								</div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Time of Event:</label>
+                                    <div class="form-group">
+                                        <input name="time" type="time" placeholder="Time" required>
+                                    </div>
+                                </div>
 								<div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Theme Colors:</label>
 									<div class="form-group">
-										<input name="themecolors" type="text" placeholder="Theme Colors">
+										<input name="themecolors" type="text" placeholder="Theme Colors" required>
 									</div>
 								</div>
                                 <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">People Count:</label>
 									<div class="form-group">
-										<input name="event" type="text" placeholder="Events">
-									</div>
-								</div>
-                                <div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<input name="people" type="text" placeholder="How Many People">
+										<input name="people" type="text" placeholder="How Many People" required>
 									</div>
 								</div>
 
 								<div class="col-lg-12 col-md-12 col-12">
 									<div class="form-group">
-										<textarea name="message" placeholder="Please Specify exactly what is needed"></textarea>
+										<textarea name="message" placeholder="Please Specify exactly what is needed" required></textarea>
 									</div>
 								</div>
 							</div>
