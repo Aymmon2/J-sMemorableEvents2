@@ -32,6 +32,4 @@ class FormController extends Controller
         return redirect()->back()->with('success', 'Form submitted successfully! We will confirm by email.');
     }
 
-
-
 }

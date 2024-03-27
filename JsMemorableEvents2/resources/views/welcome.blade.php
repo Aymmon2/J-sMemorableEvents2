@@ -100,7 +100,8 @@
                                                 <li><a href="{{ route('login') }}">Login</a></li>
                                             @endif
                                             @if(Auth::check())
-                                                <li><a href="">C-Panel</a></li>
+                                            <li><a href="{{ route('customerData') }}">C-Panel</a></li>
+
                                             @endif
                                             @if(Auth::check())
                                             <li><form action="{{ route('logout') }}" method="post">
