@@ -40,7 +40,6 @@
                                     <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
                                         </svg>
                                   <a href="https://www.tiktok.com/@js_memorable_events">js_memorable_events</a></li>
-
 							</ul>
 							<!-- End Top Contact -->
 						</div>
@@ -68,8 +67,8 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="#">Photo Booth</a></li>
-											<li><a href="{{ route('rentals') }}">Rentals</a></li>
+											<li><a href="{{ route('photobooth') }}">Photo Booth</a></li>
+											<li class="active"><a href="#">Rentals</a></li>
 											<li><a href="{{ route('cakes') }}">Cakes</a></li>
 											<li><a href="{{ url('/') }}">Home</a></li>
 										</ul>
@@ -98,67 +97,36 @@
                         alt="..." /></div>
                 <div class="col-xl-4 col-lg-5 system">
                     <div class="featured-text text-center text-lg-left">
-                        <h4>Photo Booth</h4>
+                        <h2>Rentals</h2>
                         <p class="text-black-50 mb-0">
-                            <span style="color: green;">$350</span> 2 hrs minimum <br>
-                            <span style="color: green;">$100</span> every additional hour <br>
-                            Photo album keepsake <span style="color: green;">$100</span>
+                            Pink water slide bouncer <span style="color: green;">$300</span> <br>
+                            Blue water slide bouncer <span style="color: green;">$300</span> <br>
+                            Wedding castles <span style="color: green;">$400</span> <br>
+                            Mechanical bull <span style="color: green;">$350</span> <br>
+                            Resin chairs <span style="color: green;">$4</span> each <br>
+                            Round tables <span style="color: green;">$10</span> each <br>
+                            Rectangle tables <span style="color: green;">$8</span> each <br>
+                            Bar tables <span style="color: green;">$7</span> each <br>
+                            Linens <span style="color: green;">$7</span> each minimum of 10 <br>
+                            Cake stands <span style="color: green;">$75</span> set <br>
+                            Walls <span style="color: green;">$75</span>  -
+                            Carriage <span style="color: green;">$150</span> <br>
+                            Flower wall <span style="color: green;">$200</span> -
+                            Cylinders <span style="color: green;">$75</span> <br>
+                            Kids table <span style="color: green;">$75</span> -
+                            Boho table <span style="color: green;">$75</span> <br>
+                            Flower arrangement <span style="color: green;">$75</span> -
+                            Sequence wall <span style="color: green;">$150</span> <br>
+                            Happy birthday light <span style="color: green;">$50</span> -
+                            Round stand <span style="color: green;">$75</span> <br>
+                            Balloon garland start at <span style="color: green;">$275</span> <br>
+                            Backdrop & stand <span style="color: green;">$75</span> <br>
+                            Curtain <span style="color: green;">$50</span> -
+                            Animated Props <span style="color: green;">$40</span> <br>
                         </p>
-                        <h4>Photo booth Packages</h4>
-                        <p class="text-black-50 mb-0">
-                            Basic: 2 hrs <span style="color: green;">$350</span> <br>
-                            Vinyl backdrop <br>
-
-                        </p>
-
-
-
                     </div>
                 </div>
             </div>
-
-            <!-- Project One Row-->
-            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="img/photobooth1.jpg" alt="..." />
-                </div>
-                <div class="col-lg-6">
-                    <div class=" text-center h-100 project">
-                        <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 >Intermediate:</h4>
-                                <p style="font-size: 20px; color:#2d2e40;">
-                                    4 hrs  <span style="color: green;">$750</span> <br>
-                                    Memory book <span style="color: green;">($100 value)</span> <br>
-                                    Shimmer or Flower wall
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Project Two Row-->
-            <div class="row gx-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="img/project2.jpg" alt="..." /></div>
-                <div class="col-lg-6 order-lg-first">
-                    <div class="text-center h-100 project">
-                        <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto text-center text-lg-right">
-                                <h4 class="text-black">Upscale:</h4>
-                                <p style="font-size: 20px; color:#2d2e40;">
-                                    5 hrs  <span style="color: green;">$1200</span> <br>
-                                    Memory book <span style="color: green;">($100 value)</span> <br>
-                                    Shimmer or Flower wall <br>
-                                    Balloon garland w/ customized props
-
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
 <!-- Start Appointment -->
@@ -261,43 +229,6 @@
     </div>
 </section>
 <!-- End Appointment -->
-
-
-
-        <!-- Contact Section -->
-    <section class="contact-section " id="contact">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center ">
-                <!-- Added justify-content-center to center the columns -->
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-envelope" style="color: #fab9c8; margin-bottom: 2px;"></i>
-                            <h4 class="text-uppercase m-0 colmnHead">Email</h4>
-                            <hr class="my-4 mx-auto" />
-                            <div class="small text-black">sample@email.com</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-mobile-alt" style="color: #fab9c8; margin-bottom: 2px;"></i>
-                            <h4 class="text-uppercase m-0 colmnHead">Phone</h4>
-                            <hr class="my-4 mx-auto" />
-                            <div class="small text-black">(+1)-1234-1234</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="social d-flex justify-content-center">
-                <a class="mx-2" href=""><i
-                        class="fab fa-facebook-f"></i></a>
-                <a class="mx-2" href="https://www.instagram.com/js_memorable_events/"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </section>
-
 
 
     <!-- Footer-->

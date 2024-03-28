@@ -78,7 +78,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img src="img/JSmemorableLogo.png" alt=""></a>
+									<a href=""><img src="img/JSmemorableLogo.png" alt=""></a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -219,10 +219,16 @@
                         <div class="card_content">
                             <span class="card_title">Rentals</span>
                             <span class="card_subtitle"></span>
-                            <p class="card_description">lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-                                lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+                            <p class="card_description">
+                                Pink water slide bouncer$300 <br>
+                                Blue water slide bouncer$300 <br>
+                                Wedding castles $400 <br>
+                                Mechanical bull $350 <br>
+                                Resin chairs $4 each <br>
+                                Round tables $10 each <br>
                             </p>
-
+                            <a href="{{ route('rentals') }}" class="rentals" style="color: white; font-size: 16px;">
+                                LEARN MORE <i class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </article>
                 </div>
@@ -235,8 +241,16 @@
                         <div class="card_content">
                             <span class="card_title">Cakes</span>
                             <span class="card_subtitle"></span>
-                            <p class="card_description">lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-                                lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+                            <p class="card_description">
+                                Cakepops <br>
+                                Cakecycles <br>
+                                Cupcakes <br>
+                                Pretzels <br>
+                                Rice Krispies <br>
+                                Oreos <br>
+                            <a href="{{ route('cakes') }}" class="rentals" style="color: white; font-size: 16px;">
+                            LEARN MORE <i class="fa fa-long-arrow-right"></i></a>
+                            </p>
                         </div>
                     </article>
                 </div>

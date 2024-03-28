@@ -10,4 +10,13 @@ class CardController extends Controller
     {
         return view('photobooth');
     }
+
+    public function rentals()
+    {
+        return view('rentals');
+    }
+    public function cakes()
+    {
+        return view('cakes');
+    }
 }

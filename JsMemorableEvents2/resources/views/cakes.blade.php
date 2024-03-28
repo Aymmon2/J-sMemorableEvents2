@@ -68,9 +68,9 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="#">Photo Booth</a></li>
+											<li><a href="{{ route('photobooth') }}">Photo Booth</a></li>
 											<li><a href="{{ route('rentals') }}">Rentals</a></li>
-											<li><a href="{{ route('cakes') }}">Cakes</a></li>
+											<li class="active"><a href="#">Cakes</a></li>
 											<li><a href="{{ url('/') }}">Home</a></li>
 										</ul>
 									</nav>
@@ -108,11 +108,7 @@
                         <p class="text-black-50 mb-0">
                             Basic: 2 hrs <span style="color: green;">$350</span> <br>
                             Vinyl backdrop <br>
-
                         </p>
-
-
-
                     </div>
                 </div>
             </div>
@@ -121,7 +117,7 @@
             <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
                 <div class="col-lg-6"><img class="img-fluid" src="img/photobooth1.jpg" alt="..." />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" style="background-color: #e8cf6b;">
                     <div class=" text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-left">
@@ -139,7 +135,7 @@
             <!-- Project Two Row-->
             <div class="row gx-0 justify-content-center">
                 <div class="col-lg-6"><img class="img-fluid" src="img/project2.jpg" alt="..." /></div>
-                <div class="col-lg-6 order-lg-first">
+                <div class="col-lg-6 order-lg-first" style="background-color: #e8cf6b;">
                     <div class="text-center h-100 project">
                         <div class="d-flex h-100">
                             <div class="project-text w-100 my-auto text-center text-lg-right">
@@ -149,9 +145,7 @@
                                     Memory book <span style="color: green;">($100 value)</span> <br>
                                     Shimmer or Flower wall <br>
                                     Balloon garland w/ customized props
-
                                 </p>
-
                             </div>
                         </div>
                     </div>
