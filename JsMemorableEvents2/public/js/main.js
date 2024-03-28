@@ -179,15 +179,21 @@
 	======================*/
     //get appointment go to fillupform appointment
     document.addEventListener('DOMContentLoaded', function() {
-        var bookAppointmentBtn = document.getElementById('book-appointment-btn');
-        var appointmentSection = document.querySelector('.appointment');
-        bookAppointmentBtn.addEventListener('click', function(event) {
-            event.preventDefault();
-            appointmentSection.scrollIntoView({ behavior: 'smooth' });
-        });
+        function scrollToSection(buttonId, sectionSelector) {
+            var button = document.getElementById(buttonId);
+            var section = document.querySelector(sectionSelector);
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+        scrollToSection('book-appointment-btn', '.appointment');
+        scrollToSection('services-btn', '.pricing-table');
+        scrollToSection('about-btn', '.header');
+        scrollToSection('contact-btn', '.footer');
+        scrollToSection('about-footer', '.header');
+        scrollToSection('services-footer', '.pricing-table');
     });
-
-
 
 
 

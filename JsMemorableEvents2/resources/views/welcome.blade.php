@@ -90,14 +90,10 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="index.html">Home Page 1</a></li>
-												</ul>
-											</li>
-											<li><a href="#">About Us </a></li>
-											<li><a href="#">Services </a></li>
-											<li><a href="#">Contact Us</a></li>
+											<li class="active"><a href="#">Home</a></li>
+											<li><a href="#" id="about-btn">About Us </a></li>
+											<li><a href="#" id="services-btn">Services </a></li>
+											<li><a href="#" id="contact-btn">Contact Us</a></li>
                                             @if(!Auth::check())
                                                 <li><a href="{{ route('login') }}">Login</a></li>
                                             @endif
@@ -145,10 +141,7 @@
                                         dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals, Customized backdrops. Anything
                                         to make your event smoother & easier for you to enjoy!
                                     </p>
-									<div class="button">
-										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn">Learn More</a>
-									</div>
+
 								</div>
 							</div>
 						</div>
@@ -166,10 +159,7 @@
                                         dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals, Customized backdrops. Anything
                                         to make your event smoother & easier for you to enjoy!
                                     </p>
-									<div class="button">
-										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn primary">About Us</a>
-									</div>
+
 								</div>
 							</div>
 						</div>
@@ -187,10 +177,7 @@
                                         dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals, Customized backdrops. Anything
                                         to make your event smoother & easier for you to enjoy!
                                     </p>
-									<div class="button">
-										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn primary">Conatct Now</a>
-									</div>
+
 								</div>
 							</div>
 						</div>
@@ -201,8 +188,65 @@
 		</section>
 		<!--/ End Slider Area -->
 
+        <div class="middle card">
+            <div class="row px-2 cardholder">
+                <div class="col pb-4">
+                    <article class="cards shadow">
+                        <div class="temporary_text">
+                            <img class="img-fluid mb-3 mb-lg-0" src="{{ asset('img/dslr.jpg') }}"alt="..." />
+                        </div>
+                        <div class="card_content" id="openModalBtn">
+                            <span class="card_title">Photobooth</span>
+                            <span class="card_subtitle"></span>
+                            <p class="card_description">
+                                $350 2 hrs minimum <br>
+                                $100 every additional hour <br>
+                                Photo album keepsake $100 <br>
+                                Photobooth Packages <br>
+                                Basic: 2 hrs $350 <br>
+                                Intermediate: 4 hrs $750<br>
+                            </p>
+                            <a href="{{ route('photobooth') }}" class="photobooth" style="color: white; font-size: 16px;">
+                            LEARN MORE <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col pb-4">
+                    <article class="cards shadow">
+                        <div class="temporary_text">
+                            <img class="img-fluid mb-3 mb-lg-0" src="{{ asset('img/project2.jpg') }}"alt="..." />
+                        </div>
+                        <div class="card_content">
+                            <span class="card_title">Rentals</span>
+                            <span class="card_subtitle"></span>
+                            <p class="card_description">lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+                                lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+                            </p>
+
+                        </div>
+                    </article>
+                </div>
+                <div class="col">
+                    <article class="cards shadow">
+                        <div class="temporary_text">
+                            <img class="img-fluid mb-3 mb-lg-0" src="{{ asset('img/project1.jpg') }}"
+                                alt="..." />
+                        </div>
+                        <div class="card_content">
+                            <span class="card_title">Cakes</span>
+                            <span class="card_subtitle"></span>
+                            <p class="card_description">lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
+                                lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+            {{-- <div class="col-12 borbtm"></div> --}}
+        </div>
+
 		<!-- Start Schedule Area -->
-		<section class="schedule">
+		{{-- <section class="schedule">
 			<div class="container">
 				<div class="schedule-inner">
 					<div class="row">
@@ -266,11 +310,11 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> --}}
 		<!--/End Start schedule Area -->
 
 		<!-- Start Feautes -->
-		<section class="Feautes section">
+		{{-- <section class="Feautes section">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
@@ -317,7 +361,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> --}}
 		<!--/ End Feautes -->
 
 		<!-- Start service -->
@@ -748,13 +792,11 @@
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
 											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Cases</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a></li>
+											<li><a href="#" id="about-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											<li><a href="#" id="services-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
 										</ul>
 									</div>
-									<div class="col-lg-6 col-md-6 col-12">
+									{{-- <div class="col-lg-6 col-md-6 col-12">
 										<ul>
 											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
 											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
@@ -762,7 +804,7 @@
 											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
 											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
 										</ul>
-									</div>
+									</div> --}}
 								</div>
 							</div>
 						</div>

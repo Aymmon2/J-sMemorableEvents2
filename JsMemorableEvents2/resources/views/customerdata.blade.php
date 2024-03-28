@@ -11,6 +11,9 @@
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-lg-12 col-md-12">
+                <div class="mb-3">
+                    <a href="{{ url()->previous() }}" class="btn btn-back">Back</a>
+                </div>
                 <div class="card">
                     <div class="card-body">
                         <form action="{{ route('customerData') }}" id="journAdd" method="get">
@@ -82,8 +85,7 @@
                                             <td>{{ $item->occasion }}</td>
                                             <td>{{ $item->themecolors }}</td>
                                             <td>{{ $item->people }}</td>
-                                            <td>{{ $item->message }}</td>
-
+                                            <td class="message-cell" data-message="{{ $item->message }}"></td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -106,19 +108,39 @@
         .table-container {
             overflow-x: auto;
             max-width: 100%;
-            /* Set a maximum width as needed */
             white-space: nowrap;
-            /* Prevent line breaks within table cells */
+
+        }
+        .btn-back {
+        color: white;
+        background-color: #FFB6C1; /* Baby Pink */
+        border-color: #FFB6C1; /* Baby Pink */
+        }
+
+        .btn-back:hover {
+            color: white;
+            background-color: #FF69B4; /* Hot Pink (lighter shade) */
+            border-color: #FF69B4; /* Hot Pink (lighter shade) */
         }
     </style>
 
-    <script>
-        $(document).ready(function () {
-        $('[data-bs-toggle="tooltip"]').on('click', function () {
-            // Hide the tooltip
-            $(this).tooltip('hide');
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var messageCells = document.querySelectorAll('.message-cell');
+        var maxTextLength = 20;
+
+        messageCells.forEach(function (cell) {
+            var message = cell.dataset.message;
+
+            if (message.length > maxTextLength) {
+                var truncatedText = message.substring(0, maxTextLength) + '...';
+                cell.textContent = truncatedText;
+                cell.setAttribute('title', message);
+            } else {
+                cell.textContent = message;
+            }
         });
     });
-    </script>
+</script>
 </body>
 </html>
