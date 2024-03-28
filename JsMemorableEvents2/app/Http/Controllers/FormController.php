@@ -14,6 +14,8 @@ class FormController extends Controller
         // Validate the form data
         $data = $request->validate([
             'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'contact_number' => 'required|string|max:20',
             'date' => 'required|date',
             'time' => 'required|date_format:H:i',
             'occasion' => 'required|string|max:255',
@@ -29,7 +31,7 @@ class FormController extends Controller
         Mail::to('garenacoms@gmail.com')->send(new ContactUs($data));
 
         // Redirect back with a success message
-        return redirect()->back()->with('success', 'Form submitted successfully! We will confirm by email.');
+        return redirect()->back()->with('success_message', 'Thank you for your inquiry! We will confirm by email.');
     }
 
 }

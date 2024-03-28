@@ -35,6 +35,8 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/responsive.css">
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     </head>
     <body>
@@ -629,7 +631,7 @@
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-12 col-12">
-						<form class="form" action="{{ route('submit-form') }}" method="POST">
+						<form id="booking-form" class="form" action="{{ route('submit-form') }}" method="POST">
                             @csrf
 							<div class="row">
 								<div class="col-lg-6 col-md-6 col-12">
@@ -638,6 +640,19 @@
 										<input name="name" type="text" placeholder="Name" required>
 									</div>
 								</div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Email:</label>
+									<div class="form-group">
+										<input name="email" type="text" placeholder="Email" required>
+									</div>
+								</div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Contact Number:</label>
+                                    <div class="form-group">
+                                        <input name="contact_number" type="tel" placeholder="Contact Number (e.g., +1 (123) 123-1234)" required>
+                                    </div>
+                                </div>
+
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <label for="" style="color: #2d2e40;">Date of Event:</label>
 									<div class="form-group">
@@ -684,7 +699,11 @@
 									</div>
 								</div>
 								<div class="col-lg-7 col-md-8 col-12">
-									<p>( We will be confirm by an Email )</p>
+                                    @if(session('success_message'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ session('success_message') }}
+                                    </div>
+                                @endif
 								</div>
 							</div>
 						</form>
@@ -798,6 +817,60 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+        <script>
+            document.getElementById("booking-form").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Show "Please wait" loading indicator
+                Swal.fire({
+                    title: 'Please wait...',
+                    html: '<span style="color: #ff0000">Don\'t close until the success</span>',
+                    showConfirmButton: false,
+                    timer: 2500,
+                    onBeforeOpen: () => {
+                        Swal.showLoading();
+                    }
+                })
+                .then(() => {
+                    // Get form data
+                    var formData = new FormData(this);
+
+                    // Send AJAX request to submit form data
+                    return fetch(this.action, {
+                        method: 'POST',
+                        body: formData
+                    });
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Show success SweetAlert 2 popup
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Success!',
+                            text: 'Your inquiry has been submitted successfully.',
+                            showConfirmButton: false,
+                            timer: 5000,
+
+                        });
+                        // Optionally, reset the form after successful submission
+                        this.reset();
+                    } else {
+                        // Show error SweetAlert 2 popup
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong! Please try again.',
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        </script>
+
+
+
     </body>
 </html>
 

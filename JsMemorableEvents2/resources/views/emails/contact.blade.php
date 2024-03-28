@@ -37,6 +37,8 @@
     <div class="container">
         <h1>Hello, you have got an enquiry!</h1>
         <p><strong>Name:</strong> {{ $data['name'] }}</p>
+        <p><strong>Email:</strong> {{ $data['email'] }}</p>
+        <p><strong>Contact Number:</strong> {{ $data['contact_number'] }}</p>
         <p><strong>Date & Time of Event:</strong> {{ \Carbon\Carbon::parse($data['date'] . ' ' . $data['time'])->format('d F Y - g:i a') }}</p>
         <p><strong>Occasion:</strong> {{ $data['occasion'] }}</p>
         <p><strong>Theme Colors:</strong> {{ $data['themecolors'] }}</p>
