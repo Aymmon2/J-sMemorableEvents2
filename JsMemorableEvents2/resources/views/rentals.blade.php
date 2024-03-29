@@ -22,6 +22,10 @@
         <link rel="stylesheet" href="css/responsive.css">
     </head>
 <body>
+    <div class="preloader-container">
+        <div class="preloader"></div>
+    </div>
+
     <!-- Header Area -->
 		<header class="header" >
 			<!-- Topbar -->
@@ -127,7 +131,8 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+    </section>
 
 <!-- Start Appointment -->
 <section class="appointment">
@@ -137,7 +142,6 @@
                 <div class="section-title">
                     <h2>We Are Always Ready to Help You. Book An Appointment</h2>
                     <i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
                 </div>
             </div>
         </div>
@@ -229,26 +233,75 @@
     </div>
 </section>
 <!-- End Appointment -->
+<!-- Footer Area -->
+<footer id="footer" class="footer ">
+    <!-- Footer Top -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer">
+                        <h2>About Us</h2>
+                        <p>We are a One Stop Shop! We can accommodate to planning your event from beginning to end.
+                            We offer Balloon artistry, dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals,
+                            Customized backdrops. Anything to make your event smoother & easier for you to enjoy! </p>
+                        <!-- Social -->
+                        <ul class="social">
+                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                            <li><a href="#"><i class="icofont-google-plus"></i></a></li>
+                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                            <li><a href="#"><i class="icofont-vimeo"></i></a></li>
+                            <li><a href="#"><i class="icofont-pinterest"></i></a></li>
+                        </ul>
+                        <!-- End Social -->
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer f-link">
+                        <h2>Quick Links</h2>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+                                    <li><a href="#" id="about-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                    <li><a href="#" id="services-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer">
+                        <h2>Open Hours</h2>
+                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+                        <ul class="time-sidual">
+                            <li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
+                            <li class="day">Saturday <span>9.00-18.30</span></li>
+                            <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
 
 
-    <!-- Footer-->
-    <footer class="footer small text-center text-black-10">
-        <div class="container px-4 px-lg-5">Sample address Sample address Sample address Sample address Sample address</div>
-        <div class="container px-4 px-lg-5">&copy; J'S MEMORABLE EVENTS</div>
-    </footer>
-     <!-- jquery Min JS -->
-     <script src="js/jquery.min.js"></script>
+<!-- jquery Min JS -->
+<script src="js/jquery.min.js"></script>
 
-     <!-- jquery Migrate JS -->
-     <script src="js/jquery-migrate-3.0.0.js"></script>
+<!-- jquery Migrate JS -->
+<script src="js/jquery-migrate-3.0.0.js"></script>
 
-     <!-- Popper JS -->
-     <script src="js/popper.min.js"></script>
+<!-- Popper JS -->
+<script src="js/popper.min.js"></script>
 
-     <!-- Bootstrap JS -->
-     <script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
 
-     <!-- Main JS -->
-     <script src="js/main.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
 </body>
 </html>

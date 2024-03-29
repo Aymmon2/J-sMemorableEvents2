@@ -22,6 +22,10 @@
         <link rel="stylesheet" href="css/responsive.css">
     </head>
 <body>
+    <div class="preloader-container">
+        <div class="preloader"></div>
+    </div>
+
     <!-- Header Area -->
 		<header class="header" >
 			<!-- Topbar -->

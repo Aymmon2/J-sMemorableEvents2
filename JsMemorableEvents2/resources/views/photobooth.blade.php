@@ -20,9 +20,68 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/responsive.css">
+    <style>
+            .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            }
+
+            .mySlides0 {
+                display: none;
+                width: 100%;
+                height: 400px; /* Set the fixed height for the slideshow */
+            }
+            .mySlides {
+                display: none;
+                width: 100%;
+                height: 400px; /* Set the fixed height for the slideshow */
+            }
+            .mySlides2 {
+                display: none;
+                width: 100%;
+                height: 400px; /* Set the fixed height for the slideshow */
+            }
+
+            .slideshow-container img {
+                width: 100%; /* Ensure image fills its container */
+                height: 100%; /* Ensure image fills its container */
+                object-fit: cover; /* Cover the entire container, maintaining aspect ratio */
+            }
+
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #FFC0CB; /* Baby pink color */
+                text-align: center;
+                line-height: 40px;
+                font-size: 20px;
+                color: white;
+                cursor: pointer;
+            }
+
+            .prev {
+                left: 0;
+            }
+
+            .next {
+                right: 0;
+            }
+
+    </style>
+
     </head>
 <body>
-    <!-- Header Area -->
+    <div class="preloader-container">
+        <div class="preloader"></div>
+    </div>
+
+<!-- Header Area -->
 		<header class="header" >
 			<!-- Topbar -->
 			<div class="topbar">
@@ -89,13 +148,42 @@
 			<!--/ End Header Inner -->
 		</header>
 		<!-- End Header Area -->
-     <!-- Projects Section -->
+
+
+<!-- Projects Section -->
     <section class="projects-section bg-light" id="projects">
         <div class="container px-4 px-lg-5">
             <!-- Featured Project Row-->
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="img/dslr.jpg"
-                        alt="..." /></div>
+                <div class="col-xl-8 col-lg-7">
+                    <div class="slideshow-container">
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth1.jpeg" alt="Slide 1" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth2.jpeg" alt="Slide 2" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth3.jpeg" alt="Slide 3" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth4.jpeg" alt="Slide 4" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth5.jpeg" alt="Slide 5" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth6.jpeg" alt="Slide 6" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth7.jpeg" alt="Slide 7" />
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
                 <div class="col-xl-4 col-lg-5 system">
                     <div class="featured-text text-center text-lg-left">
                         <h4>Photo Booth</h4>
@@ -108,19 +196,25 @@
                         <p class="text-black-50 mb-0">
                             Basic: 2 hrs <span style="color: green;">$350</span> <br>
                             Vinyl backdrop <br>
-
                         </p>
-
-
-
                     </div>
                 </div>
             </div>
 
             <!-- Project One Row-->
             <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="img/photobooth1.jpg" alt="..." />
+                <div class="col-lg-6 slideshow-container">
+                    <div class="mySlides">
+                        <img class="img-fluid" src="img/photobooth/intermediate1.jpeg" alt="Slide 1">
+                    </div>
+                    <div class="mySlides">
+                        <img class="img-fluid" src="img/photobooth/intermediate2.jpeg" alt="Slide 2">
+                    </div>
+                    <div class="mySlides">
+                        <img class="img-fluid" src="img/photobooth/intermediate3.jpeg" alt="Slide 3">
+                    </div>
                 </div>
+
                 <div class="col-lg-6">
                     <div class=" text-center h-100 project">
                         <div class="d-flex h-100">
@@ -138,7 +232,25 @@
             </div>
             <!-- Project Two Row-->
             <div class="row gx-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="img/project2.jpg" alt="..." /></div>
+                <div class="col-lg-6 slideshow-container">
+                    <div class="mySlides2">
+                        <img class="img-fluid" src="img/photobooth/upscale5.jpeg" alt="Slide 1">
+                    </div>
+                    <!-- Add more slides here -->
+                    <div class="mySlides2">
+                        <img class="img-fluid" src="img/photobooth/upscale1.jpeg" alt="Slide 2">
+                    </div>
+
+                    <div class="mySlides2">
+                        <img class="img-fluid" src="img/photobooth/upscale2.jpeg" alt="Slide 3">
+                    </div>
+                    <div class="mySlides2">
+                        <img class="img-fluid" src="img/photobooth/upscale3.jpeg" alt="Slide 4">
+                    </div>
+                    <div class="mySlides2">
+                        <img class="img-fluid" src="img/photobooth/upscale4.jpeg" alt="Slide 5">
+                    </div>
+                </div>
                 <div class="col-lg-6 order-lg-first">
                     <div class="text-center h-100 project">
                         <div class="d-flex h-100">
@@ -169,7 +281,6 @@
                 <div class="section-title">
                     <h2>We Are Always Ready to Help You. Book An Appointment</h2>
                     <i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
                 </div>
             </div>
         </div>
@@ -262,62 +373,162 @@
 </section>
 <!-- End Appointment -->
 
-
-
-        <!-- Contact Section -->
-    <section class="contact-section " id="contact">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center ">
-                <!-- Added justify-content-center to center the columns -->
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-envelope" style="color: #fab9c8; margin-bottom: 2px;"></i>
-                            <h4 class="text-uppercase m-0 colmnHead">Email</h4>
-                            <hr class="my-4 mx-auto" />
-                            <div class="small text-black">sample@email.com</div>
+<!-- Footer Area -->
+<footer id="footer" class="footer ">
+    <!-- Footer Top -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer">
+                        <h2>About Us</h2>
+                        <p>We are a One Stop Shop! We can accommodate to planning your event from beginning to end.
+                            We offer Balloon artistry, dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals,
+                            Customized backdrops. Anything to make your event smoother & easier for you to enjoy! </p>
+                        <!-- Social -->
+                        <ul class="social">
+                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                            <li><a href="#"><i class="icofont-google-plus"></i></a></li>
+                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                            <li><a href="#"><i class="icofont-vimeo"></i></a></li>
+                            <li><a href="#"><i class="icofont-pinterest"></i></a></li>
+                        </ul>
+                        <!-- End Social -->
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer f-link">
+                        <h2>Quick Links</h2>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+                                    <li><a href="#" id="about-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                    <li><a href="#" id="services-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+                                </ul>
+                            </div>
+                            {{-- <div class="col-lg-6 col-md-6 col-12">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
+                                </ul>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-mobile-alt" style="color: #fab9c8; margin-bottom: 2px;"></i>
-                            <h4 class="text-uppercase m-0 colmnHead">Phone</h4>
-                            <hr class="my-4 mx-auto" />
-                            <div class="small text-black">(+1)-1234-1234</div>
-                        </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="single-footer">
+                        <h2>Open Hours</h2>
+                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+                        <ul class="time-sidual">
+                            <li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
+                            <li class="day">Saturday <span>9.00-18.30</span></li>
+                            <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="social d-flex justify-content-center">
-                <a class="mx-2" href=""><i
-                        class="fab fa-facebook-f"></i></a>
-                <a class="mx-2" href="https://www.instagram.com/js_memorable_events/"><i class="fab fa-instagram"></i></a>
+
             </div>
         </div>
-    </section>
+
+    </div>
+    <!--/ End Footer Top -->
+    <!-- Copyright -->
+    {{-- <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                    <div class="copyright-content">
+                        <p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+    <!--/ End Copyright -->
+</footer>
 
 
 
-    <!-- Footer-->
-    <footer class="footer small text-center text-black-10">
-        <div class="container px-4 px-lg-5">Sample address Sample address Sample address Sample address Sample address</div>
-        <div class="container px-4 px-lg-5">&copy; J'S MEMORABLE EVENTS</div>
-    </footer>
-     <!-- jquery Min JS -->
-     <script src="js/jquery.min.js"></script>
 
-     <!-- jquery Migrate JS -->
-     <script src="js/jquery-migrate-3.0.0.js"></script>
 
-     <!-- Popper JS -->
-     <script src="js/popper.min.js"></script>
 
-     <!-- Bootstrap JS -->
-     <script src="js/bootstrap.min.js"></script>
+<!-- jquery Min JS -->
+<script src="js/jquery.min.js"></script>
 
-     <!-- Main JS -->
-     <script src="js/main.js"></script>
+<!-- jquery Migrate JS -->
+<script src="js/jquery-migrate-3.0.0.js"></script>
+
+<!-- Popper JS -->
+<script src="js/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Main JS -->
+<script src="js/main.js"></script>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000);
+    }
+</script>
+<script>
+    var slideIndex = 0;
+    showSlides2();
+
+    function showSlides2() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides2");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides2, 3000);
+    }
+</script>
+
+
+<script>
+    var slideIndex = 1;
+    photoSlides(slideIndex);
+
+    function plusSlides(n) {
+        photoSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        photoSlides(slideIndex = n);
+    }
+
+    function photoSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides0");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+</script>
+
+
 </body>
 </html>
