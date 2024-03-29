@@ -10,9 +10,9 @@
 <body>
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-12">
+            <div class="col-12">
                 <div class="mb-3">
-                    <a href="{{ url()->previous() }}" class="btn btn-back">Back</a>
+                    <a href="{{ url('/') }}" class="btn btn-back">Back</a>
                 </div>
                 <div class="card">
                     <div class="card-body">
@@ -63,12 +63,18 @@
                             <p class="alert alert-success text-center"><b>{{ date('F d, Y', strtotime($startDate)) }} to {{ date('F d, Y', strtotime($endDate)) }}</b></p>
                         @endif
 
+                        <div class="input-group mb-3" style="width: 110px;">
+                            <input type="text" class="form-control" placeholder="Search..." id="searchInput" >
+                        </div>
+
                         <div class="table-responsive">
                             <table class="table custom-table">
                                 <thead>
                                     <tr>
                                         <th>Date Created</th>
                                         <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Contact</th>
                                         <th>Date & Time of Events</th>
                                         <th>Occasion</th>
                                         <th>Theme Colors</th>
@@ -81,6 +87,8 @@
                                         <tr>
                                             <td>{{ $item->created_at->format('F d, Y') }}</td>
                                             <td>{{ $item->name }}</td>
+                                            <td>{{ $item->email }}</td>
+                                            <td>{{ $item->contact_number }}</td>
                                             <td>{{ \Carbon\Carbon::parse($item['date'] . ' ' . $item['time'])->format('d F Y - g:i a') }}</td>
                                             <td>{{ $item->occasion }}</td>
                                             <td>{{ $item->themecolors }}</td>
@@ -98,31 +106,27 @@
     </div>
     <script src="js/bootstrap.min.js"></script>
 
-    <style>
-        .custom-table th,
-        .custom-table td {
-            border: 1px solid #dee2e6;
-            text-align: center;
-        }
+<style>
+    .custom-table th,
+    .custom-table td {
+        border: 1px solid #dee2e6;
+        text-align: center;
+        overflow-x: auto;
+        max-width: 100%;
+        white-space: nowrap;
+    }
+    .btn-back {
+    color: white;
+    background-color: #FFB6C1; /* Baby Pink */
+    border-color: #FFB6C1; /* Baby Pink */
+    }
 
-        .table-container {
-            overflow-x: auto;
-            max-width: 100%;
-            white-space: nowrap;
-
-        }
-        .btn-back {
+    .btn-back:hover {
         color: white;
-        background-color: #FFB6C1; /* Baby Pink */
-        border-color: #FFB6C1; /* Baby Pink */
-        }
-
-        .btn-back:hover {
-            color: white;
-            background-color: #FF69B4; /* Hot Pink (lighter shade) */
-            border-color: #FF69B4; /* Hot Pink (lighter shade) */
-        }
-    </style>
+        background-color: #FF69B4; /* Hot Pink (lighter shade) */
+        border-color: #FF69B4; /* Hot Pink (lighter shade) */
+    }
+</style>
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -138,6 +142,30 @@
                 cell.setAttribute('title', message);
             } else {
                 cell.textContent = message;
+            }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('searchInput').addEventListener('input', function () {
+            var input, filter, table, tr, td, i, j, txtValue;
+            input = this.value.toUpperCase();
+            table = document.querySelector(".custom-table");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                var found = false;
+                td = tr[i].getElementsByTagName("td");
+                for (j = 0; j < td.length; j++) {
+                    if (td[j]) {
+                        txtValue = td[j].textContent || td[j].innerText;
+                        if (txtValue.toUpperCase().indexOf(input) > -1) {
+                            found = true;
+                            break;
+                        }
+                    }
+                }
+                tr[i].style.display = found ? "" : "none";
             }
         });
     });

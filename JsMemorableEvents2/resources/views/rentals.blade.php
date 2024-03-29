@@ -20,6 +20,50 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <style>
+            .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            }
+
+            .mySlides0 {
+                display: none;
+                width: 100%;
+                height: 500px; /* Set the fixed height for the slideshow */
+            }
+
+            .slideshow-container img {
+                width: 100%; /* Ensure image fills its container */
+                height: 100%; /* Ensure image fills its container */
+                object-fit: cover; /* Cover the entire container, maintaining aspect ratio */
+            }
+
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #FFC0CB; /* Baby pink color */
+                text-align: center;
+                line-height: 40px;
+                font-size: 20px;
+                color: white;
+                cursor: pointer;
+            }
+
+            .prev {
+                left: 0;
+            }
+
+            .next {
+                right: 0;
+            }
+
+    </style>
     </head>
 <body>
     <div class="preloader-container">
@@ -97,11 +141,68 @@
         <div class="container px-4 px-lg-5">
             <!-- Featured Project Row-->
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="img/dslr.jpg"
-                        alt="..." /></div>
+
+                <div class="col-xl-8 col-lg-7">
+                    <div class="slideshow-container">
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals1.jpeg" alt="Slide 1" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals2.jpeg" alt="Slide 2" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals3.jpeg" alt="Slide 3" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals4.jpeg" alt="Slide 4" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals5.jpeg" alt="Slide 5" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals6.jpeg" alt="Slide 6" />
+                        </div>
+                        {{-- table --}}
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals7.jpeg" alt="Slide 7" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals8.jpeg" alt="Slide 8" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals9.jpeg" alt="Slide 9" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals10.jpeg" alt="Slide 10" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals11.jpeg" alt="Slide 11" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals12.jpeg" alt="Slide 12" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals13.jpeg" alt="Slide 13" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals14.jpeg" alt="Slide 14" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals15.jpeg" alt="Slide 15" />
+                        </div>
+                        <div class="mySlides0">
+                            <img class="img-fluid mb-3 mb-lg-0" src="img/rentals/rentals17.jpeg" alt="Slide 16" />
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
                 <div class="col-xl-4 col-lg-5 system">
                     <div class="featured-text text-center text-lg-left">
-                        <h2>Rentals</h2>
+                        <h2 style="font-size: 40px; font-weight: bold;">Rentals</h2>
                         <p class="text-black-50 mb-0">
                             Pink water slide bouncer <span style="color: green;">$300</span> <br>
                             Blue water slide bouncer <span style="color: green;">$300</span> <br>
@@ -134,6 +235,104 @@
         </div>
     </section>
 
+    <!-- Pricing Table -->
+		<section class="pricing-table section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>WE PROVIDE YOU WITH THE BEST EVENTS AT A REASONABLE PRICE</h2>
+							<i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
+							<p>Discover the unbeatable value of our premium events, meticulously curated to exceed your expectations while keeping costs within reach.
+                                Experience excellence without compromise - your dream event awaits!</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-dining-table"></i>
+								</div>
+								<h4 class="title">Tables/chairs & bouncers</h4>
+								<div class="price">
+                                    <p class="amount">$450</p>
+								</div>
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>4 tables 40  chairs <span style="color: #f7b2c9;">($196 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>Bouncer <span style="color: #f7b2c9;">($300)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>For a full day event</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" id="book-appointment1-btn" href="#">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-industries-3"></i>
+								</div>
+								<h4 class="title">Intermediate</h4>
+								<div class="price">
+									<p class="amount">$700</p>
+								</div>
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>10 tables 100 chairs <span style="color: #f7b2c9;">($480 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>Bouncer <span style="color: #f7b2c9;">($300 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>For a full day event </li>
+
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" id="book-appointment2-btn" href="#">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-industries-4"></i>
+								</div>
+								<h4 class="title">Upscale</h4>
+								<div class="price">
+									<p class="amount">$1250</p>
+								</div>
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>20 tables 200 chairs <span style="color: #f7b2c9;">($960 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>Wedding bouncer <span style="color: #f7b2c9;">($400 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>For a full day event</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" id="book-appointment3-btn" href="#">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+				</div>
+			</div>
+		</section>
+		<!--/ End Pricing Table -->
 <!-- Start Appointment -->
 <section class="appointment">
     <div class="container">
@@ -303,5 +502,46 @@
 
 <!-- Main JS -->
 <script src="js/main.js"></script>
+
+<script>
+     document.addEventListener('DOMContentLoaded', function() {
+        function scrollToSection(buttonId, sectionSelector) {
+            var button = document.getElementById(buttonId);
+            var section = document.querySelector(sectionSelector);
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+        }
+        scrollToSection('book-appointment-btn', '.appointment');
+        scrollToSection('book-appointment1-btn', '.appointment');
+        scrollToSection('book-appointment2-btn', '.appointment');
+        scrollToSection('book-appointment3-btn', '.appointment');
+    });
+</script>
+<script>
+    var slideIndex = 1;
+    photoSlides(slideIndex);
+
+    function plusSlides(n) {
+        photoSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        photoSlides(slideIndex = n);
+    }
+
+    function photoSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides0");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+
+    }
+</script>
 </body>
 </html>
