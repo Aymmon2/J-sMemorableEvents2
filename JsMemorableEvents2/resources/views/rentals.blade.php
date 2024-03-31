@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>J'S Memorable Events</title>
-        <!-- Core theme CSS -->
-        <link href="/styles2.css" rel="stylesheet" />
-        <link href="/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+       <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>J'S MEMORABLE EVENTS</title>
+        <link rel="icon" href="img/JSmemorableLogo.png">
 
-        <!-- icofont CSS -->
-        <link rel="stylesheet" href="css/icofont.css">
-        <!-- Font Awesome CSS -->
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="css/nice-select.css">
+		<!-- Font Awesome CSS -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="css/icofont.css">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="css/slicknav.min.css">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="css/owl-carousel.css">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
 
 		<!-- Medipro CSS -->
         <link rel="stylesheet" href="css/normalize.css">
@@ -31,7 +45,7 @@
             .mySlides0 {
                 display: none;
                 width: 100%;
-                height: 500px; /* Set the fixed height for the slideshow */
+                height: 700px; /* Set the fixed height for the slideshow */
             }
 
             .slideshow-container img {
@@ -115,10 +129,10 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
+                                            <li><a href="{{ url('/') }}">Home</a></li>
 											<li><a href="{{ route('photobooth') }}">Photo Booth</a></li>
 											<li class="active"><a href="#">Rentals</a></li>
 											<li><a href="{{ route('cakes') }}">Cakes</a></li>
-											<li><a href="{{ url('/') }}">Home</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -487,19 +501,19 @@
     </div>
 </footer>
 
-
 <!-- jquery Min JS -->
 <script src="js/jquery.min.js"></script>
-
 <!-- jquery Migrate JS -->
 <script src="js/jquery-migrate-3.0.0.js"></script>
-
 <!-- Popper JS -->
 <script src="js/popper.min.js"></script>
-
+<script src="js/slicknav.min.js"></script>
+<!-- Niceselect JS -->
+<script src="js/niceselect.js"></script>
+<!-- Owl Carousel JS -->
+<script src="js/owl-carousel.js"></script>
 <!-- Bootstrap JS -->
 <script src="js/bootstrap.min.js"></script>
-
 <!-- Main JS -->
 <script src="js/main.js"></script>
 

@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>J'S Memorable Events</title>
-        <!-- Core theme CSS -->
-        <link href="/styles2.css" rel="stylesheet" />
-        <link href="/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Meta Tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="keywords" content="Site keywords here">
+		<meta name="description" content="">
+		<meta name='copyright' content=''>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>J'S MEMORABLE EVENTS</title>
+        <link rel="icon" href="img/JSmemorableLogo.png">
 
-        <!-- icofont CSS -->
-        <link rel="stylesheet" href="css/icofont.css">
-        <!-- Font Awesome CSS -->
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+
+		<!-- Nice Select CSS -->
+		<link rel="stylesheet" href="css/nice-select.css">
+		<!-- Font Awesome CSS -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- icofont CSS -->
+        <link rel="stylesheet" href="css/icofont.css">
+		<!-- Slicknav -->
+		<link rel="stylesheet" href="css/slicknav.min.css">
+		<!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="css/owl-carousel.css">
+		<!-- Animate CSS -->
+        <link rel="stylesheet" href="css/animate.min.css">
 
 		<!-- Medipro CSS -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/responsive.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <style>
+            .news-head img {
+                width: 150%;
+                height: 400px; /* Adjust the height as needed */
+                object-fit: cover;
+            }
+        </style>
     </head>
 <body>
     <div class="preloader-container">
@@ -72,10 +95,10 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
+                                            <li><a href="{{ url('/') }}">Home</a></li>
 											<li><a href="{{ route('photobooth') }}">Photo Booth</a></li>
 											<li><a href="{{ route('rentals') }}">Rentals</a></li>
 											<li class="active"><a href="#">Cakes</a></li>
-											<li><a href="{{ url('/') }}">Home</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -93,71 +116,250 @@
 			<!--/ End Header Inner -->
 		</header>
 		<!-- End Header Area -->
-     <!-- Projects Section -->
-    <section class="projects-section bg-light" id="projects">
-        <div class="container px-4 px-lg-5">
-            <!-- Featured Project Row-->
-            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="img/dslr.jpg"
-                        alt="..." /></div>
-                <div class="col-xl-4 col-lg-5 system">
-                    <div class="featured-text text-center text-lg-left">
-                        <h4>Photo Booth</h4>
-                        <p class="text-black-50 mb-0">
-                            <span style="color: green;">$350</span> 2 hrs minimum <br>
-                            <span style="color: green;">$100</span> every additional hour <br>
-                            Photo album keepsake <span style="color: green;">$100</span>
-                        </p>
-                        <h4>Photo booth Packages</h4>
-                        <p class="text-black-50 mb-0">
-                            Basic: 2 hrs <span style="color: green;">$350</span> <br>
-                            Vinyl backdrop <br>
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project One Row-->
-            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="img/photobooth1.jpg" alt="..." />
-                </div>
-                <div class="col-lg-6" style="background-color: #e8cf6b;">
-                    <div class=" text-center h-100 project">
-                        <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 >Intermediate:</h4>
-                                <p style="font-size: 20px; color:#2d2e40;">
-                                    4 hrs  <span style="color: green;">$750</span> <br>
-                                    Memory book <span style="color: green;">($100 value)</span> <br>
-                                    Shimmer or Flower wall
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Project Two Row-->
-            <div class="row gx-0 justify-content-center">
-                <div class="col-lg-6"><img class="img-fluid" src="img/project2.jpg" alt="..." /></div>
-                <div class="col-lg-6 order-lg-first" style="background-color: #e8cf6b;">
-                    <div class="text-center h-100 project">
-                        <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto text-center text-lg-right">
-                                <h4 class="text-black">Upscale:</h4>
-                                <p style="font-size: 20px; color:#2d2e40;">
-                                    5 hrs  <span style="color: green;">$1200</span> <br>
-                                    Memory book <span style="color: green;">($100 value)</span> <br>
-                                    Shimmer or Flower wall <br>
-                                    Balloon garland w/ customized props
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
+
+        <!-- Pricing Table -->
+		<section class="pricing-table section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>CAKES & DESSERTS</h2>
+							<i class="icofont-layered-cake" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
+							<p>50% non refundable deposit required to book your date. All payments must be paid 5 days before event.
+                                Will accept all payment type. Zelle, Cashapp, Venmo, PayPal & cash.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-cup-cake"></i>
+								</div>
+								<h4 class="title">Desserts </h4>
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Cupcakes</li>
+								<li><i class="icofont icofont-ui-check"></i>Pretzels</li>
+								<li><i class="icofont icofont-ui-check"></i>Rice Krispies</li>
+								<li><i class="icofont icofont-ui-check"></i>Oreos</li>
+								<li><i class="icofont icofont-ui-check"></i>Cakepops</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#" id="book-now9-btn">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-cup-cake"></i>
+								</div>
+								<h4 class="title">Desserts</h4>
+							</div>
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Cakecycles</li>
+								<li><i class="icofont icofont-ui-check"></i>Strawberries</li>
+								<li><i class="icofont icofont-ui-check"></i>Gourmet apples</li>
+								<li><i class="icofont icofont-ui-check"></i>Strawberry tower</li>
+								<li><i class="icofont icofont-ui-check"></i>Dessert tower</li>
+
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#" id="book-now10-btn">Book Now</a>
+							</div>
+						</div>
+					</div>
+					<!-- End Single Table-->
+				</div>
+			</div>
+		</section>
+		<!--/ End Pricing Table -->
+
+
+        {{-- blog1 --}}
+        <section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/cakes/cake1.jpeg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+                                    <div>
+                                        <a class="btn booknow2" href="#" id="book-now-btn">Book Now</a>
+                                    </div>
+								</div>
+
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/cakes/cake7.jpeg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div>
+                                        <a href="#" class="btn booknow2" id="book-now1-btn">Book Now</a>
+                                    </div>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/cakes/cake5.jpeg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="">
+                                        <a class="btn booknow2" href="#" id="book-now2-btn">Book Now</a>
+                                    </div>
+
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+
+				</div>
+			</div>
+		</section>
+        {{-- blog2 --}}
+        <section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/cakes/cake2.jpeg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+                                    <div>
+                                        <a class="btn booknow2" href="#" id="book-now3-btn">Book Now</a>
+                                    </div>
+								</div>
+
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/cakes/cake3.jpeg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div>
+                                        <a class="btn booknow2" href="#" id="book-now4-btn">Book Now</a>
+                                    </div>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/cakes/cake4.jpeg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="">
+                                        <a class="btn booknow2" href="#" id="book-now5-btn">Book Now</a>
+                                    </div>
+
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+
+				</div>
+			</div>
+		</section>
+        {{-- blog3 --}}
+        <section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/cakes/cake6.jpeg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+                                    <div>
+                                        <a class="btn booknow2" href="#" id="book-now6-btn">Book Now</a>
+                                    </div>
+								</div>
+
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/cakes/cake8.jpeg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div>
+                                        <a class="btn booknow2" href="#" id="book-now7-btn">Book Now</a>
+                                    </div>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="img/cakes/cake9.jpeg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="">
+                                        <a class="btn booknow2" href="#" id="book-now8-btn">Book Now</a>
+                                    </div>
+
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+
+				</div>
+			</div>
+		</section>
 
 <!-- Start Appointment -->
 <section class="appointment">
@@ -166,8 +368,9 @@
             <div class="col-lg-12">
                 <div class="section-title">
                     <h2>We Are Always Ready to Help You. Book An Appointment</h2>
-                    <i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+                    <i class="icofont-layered-cake" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
+                    <p>50% non refundable deposit required to book your date. All payments must be paid 5 days before event.
+                        Will accept all payment type. Zelle, Cashapp, Venmo, PayPal & cash. </p>
                 </div>
             </div>
         </div>
@@ -252,7 +455,7 @@
             </div>
             <div class="col-lg-6 col-md-12 ">
                 <div class="appointment-image">
-                    <img src="img/balloonss.png" alt="#">
+                    <img src="img/cakes/cakenobg.png" alt="#">
                 </div>
             </div>
         </div>
@@ -260,62 +463,44 @@
 </section>
 <!-- End Appointment -->
 
-
-
-        <!-- Contact Section -->
-    <section class="contact-section " id="contact">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center ">
-                <!-- Added justify-content-center to center the columns -->
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-envelope" style="color: #fab9c8; margin-bottom: 2px;"></i>
-                            <h4 class="text-uppercase m-0 colmnHead">Email</h4>
-                            <hr class="my-4 mx-auto" />
-                            <div class="small text-black">sample@email.com</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <i class="fas fa-mobile-alt" style="color: #fab9c8; margin-bottom: 2px;"></i>
-                            <h4 class="text-uppercase m-0 colmnHead">Phone</h4>
-                            <hr class="my-4 mx-auto" />
-                            <div class="small text-black">(+1)-1234-1234</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="social d-flex justify-content-center">
-                <a class="mx-2" href=""><i
-                        class="fab fa-facebook-f"></i></a>
-                <a class="mx-2" href="https://www.instagram.com/js_memorable_events/"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Footer-->
-    <footer class="footer small text-center text-black-10">
-        <div class="container px-4 px-lg-5">Sample address Sample address Sample address Sample address Sample address</div>
-        <div class="container px-4 px-lg-5">&copy; J'S MEMORABLE EVENTS</div>
-    </footer>
      <!-- jquery Min JS -->
      <script src="js/jquery.min.js"></script>
-
      <!-- jquery Migrate JS -->
      <script src="js/jquery-migrate-3.0.0.js"></script>
-
      <!-- Popper JS -->
      <script src="js/popper.min.js"></script>
-
+     <script src="js/slicknav.min.js"></script>
+     <!-- Niceselect JS -->
+     <script src="js/niceselect.js"></script>
+     <!-- Owl Carousel JS -->
+     <script src="js/owl-carousel.js"></script>
      <!-- Bootstrap JS -->
      <script src="js/bootstrap.min.js"></script>
-
      <!-- Main JS -->
      <script src="js/main.js"></script>
+
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+           function scrollToSection(buttonId, sectionSelector) {
+               var button = document.getElementById(buttonId);
+               var section = document.querySelector(sectionSelector);
+               button.addEventListener('click', function(event) {
+                   event.preventDefault();
+                   section.scrollIntoView({ behavior: 'smooth' });
+               });
+           }
+           scrollToSection('book-now-btn', '.appointment');
+           scrollToSection('book-now1-btn', '.appointment');
+           scrollToSection('book-now2-btn', '.appointment');
+           scrollToSection('book-now3-btn', '.appointment');
+           scrollToSection('book-now4-btn', '.appointment');
+           scrollToSection('book-now5-btn', '.appointment');
+           scrollToSection('book-now6-btn', '.appointment');
+           scrollToSection('book-now7-btn', '.appointment');
+           scrollToSection('book-now8-btn', '.appointment');
+           scrollToSection('book-now9-btn', '.appointment');
+           scrollToSection('book-now10-btn', '.appointment');
+       });
+   </script>
 </body>
 </html>

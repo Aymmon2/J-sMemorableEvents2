@@ -36,10 +36,9 @@
         <link rel="stylesheet" href="css/responsive.css">
 
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
     </head>
     <body>
+
         <div class="preloader-container">
             <div class="preloader"></div>
         </div>
@@ -55,7 +54,7 @@
 							<!-- Top Contact -->
 							<ul class="top-contact">
                                 <li><i class="fa fa-phone"></i>+123 1234 56789</li>
-                                <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">sample@yourmail.com</a></li>
+                                <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">jsmemorableevents@yahoo.com</a></li>
                                 <li><i class="icofont-instagram"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
                                 <li><i class="icofont-facebook"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
                                 <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC0CB" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
@@ -107,8 +106,6 @@
                                                 <a href="#" onclick="event.preventDefault(); this.closest('form').submit();" style="cursor: pointer;">Logout</a>
                                             </form></li>
                                             @endif
-
-
 										</ul>
 									</nav>
 								</div>
@@ -862,7 +859,6 @@
 		<script src="js/jquery-migrate-3.0.0.js"></script>
 		<!-- Popper JS -->
 		<script src="js/popper.min.js"></script>
-		<!-- Bootstrap Datepicker JS -->
 		<script src="js/slicknav.min.js"></script>
 		<!-- Niceselect JS -->
 		<script src="js/niceselect.js"></script>
@@ -924,7 +920,20 @@
             });
         </script>
 
-
+{{-- <style>/* Hide main menu on mobile */
+    @media (max-width: 767px) {
+        .main-menu {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+    $(document).ready(function(){
+        $('.menu-toggle').click(function(){
+            $('.main-menu').slideToggle();
+        });
+    });
+    </script> --}}
 
     </body>
 </html>

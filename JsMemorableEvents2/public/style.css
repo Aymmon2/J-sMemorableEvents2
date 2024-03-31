@@ -775,7 +775,7 @@ body{
 	Start Feautes CSS
 ===============================*/
 .btn.booknow2 {
-    background-color: #f7d200;
+    background-color: #f7b2c9;
     color: #F6F7FB;
     font-size: small;
     margin-top: -5px;
@@ -890,8 +890,7 @@ body{
 }
 /* Table List */
 .pricing-table .single-table .table-list {
-	padding: 10px 0;
-	text-align: left;
+	text-align: center;
 	margin-top: 30px;
 }
 .pricing-table .table-list li {
@@ -899,7 +898,6 @@ body{
 	color: #666;
 	text-transform: capitalize;
 	margin-bottom: 18px;
-	padding-right: 32px;
 }
 .pricing-table .table-list li:last-child{
 	margin-bottom:0px;
@@ -910,7 +908,7 @@ body{
 .pricing-table .table-list i {
 	font-size: 7px;
 	text-align: center;
-	margin-right: 10px;
+
 	position: absolute;
 	right: 0;
 	height: 16px;
@@ -920,7 +918,6 @@ body{
 	color: #fff;
 	background: #f7b2c9;
 	border-radius: 100%;
-	padding-left: 1px;
 }
 
 /* Table Bottom */
