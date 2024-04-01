@@ -34,8 +34,63 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/responsive.css">
-
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <style>
+            .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            }
+
+            .editphoto {
+                display: none;
+                width: 100%;
+                height: 400px;
+            }
+
+            .mySlides0 {
+                display: none;
+                width: 100%;
+                height: 400px;
+            }
+
+            .slideshow-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #FFC0CB; /* Baby pink color */
+                text-align: center;
+                line-height: 40px;
+                font-size: 20px;
+                color: white;
+                cursor: pointer;
+            }
+
+            .prev {
+                left: 0;
+            }
+
+            .next {
+                right: 0;
+            }
+
+            .news-head img {
+                width: 150%;
+                height: 400px;
+                object-fit: cover;
+            }
+        </style>
     </head>
     <body>
 
@@ -53,7 +108,6 @@
 						<div class="col-lg-12 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-                                <li><i class="fa fa-phone"></i>+123 1234 56789</li>
                                 <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">jsmemorableevents@yahoo.com</a></li>
                                 <li><i class="icofont-instagram"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
                                 <li><i class="icofont-facebook"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
@@ -90,9 +144,9 @@
 									<nav class="navigation">
 										<ul class="nav menu">
 											<li class="active"><a href="#">Home</a></li>
-											<li><a href="#" id="about-btn">About Us </a></li>
-											<li><a href="#" id="services-btn">Services </a></li>
-											<li><a href="#" id="contact-btn">Contact Us</a></li>
+											<li><a href="{{ route('photobooth') }}">Photobooth</a></li>
+											<li><a href="{{ route('rentals') }}">Rentals</a></li>
+											<li><a href="{{ route('cakes') }}">Cakes</a></li>
                                             @if(!Auth::check())
                                                 <li><a href="{{ route('login') }}">Login</a></li>
                                             @endif
@@ -146,7 +200,7 @@
 				</div>
 				<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/cakepink.jpg')">
+				<div class="single-slider" style="background-image:url('img/slider2.jpg')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -164,7 +218,7 @@
 				</div>
 				<!-- Start End Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/cakepink.jpg')">
+				<div class="single-slider" style="background-image:url('img/slider3.jpg')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -185,12 +239,13 @@
 		</section>
 		<!--/ End Slider Area -->
 
+        {{-- 3 card --}}
         <div class="middle card">
             <div class="row px-2 cardholder">
                 <div class="col pb-4">
                     <article class="cards shadow">
                         <div class="temporary_text">
-                            <img class="img-fluid mb-3 mb-lg-0" src="{{ asset('img/dslr.jpg') }}"alt="..." />
+                            <img class="img-fluid mb-3 mb-lg-0" src="{{ asset('img/photobooth/upscale1.jpeg') }}"alt="..." />
                         </div>
                         <div class="card_content" id="openModalBtn">
                             <span class="card_title">Photobooth</span>
@@ -211,7 +266,7 @@
                 <div class="col pb-4">
                     <article class="cards shadow">
                         <div class="temporary_text">
-                            <img class="img-fluid mb-3 mb-lg-0" src="{{ asset('img/project2.jpg') }}"alt="..." />
+                            <img class="img-fluid mb-3 mb-lg-0" src="{{ asset('img/rentals/rentals10.jpeg') }}"alt="..." />
                         </div>
                         <div class="card_content">
                             <span class="card_title">Rentals</span>
@@ -232,7 +287,7 @@
                 <div class="col">
                     <article class="cards shadow">
                         <div class="temporary_text">
-                            <img class="img-fluid mb-3 mb-lg-0" src="{{ asset('img/project1.jpg') }}"
+                            <img class="img-fluid mb-3 mb-lg-0" src="{{ asset('img/cakes/cake1.jpeg') }}"
                                 alt="..." />
                         </div>
                         <div class="card_content">
@@ -255,197 +310,97 @@
             </div>
             {{-- <div class="col-12 borbtm"></div> --}}
         </div>
+        {{-- 3 card end --}}
 
-		<!-- Start Schedule Area -->
-		{{-- <section class="schedule">
-			<div class="container">
-				<div class="schedule-inner">
-					<div class="row">
-						<div class="col-lg-4 col-md-6 col-12 ">
-							<!-- single-schedule -->
-							<div class="single-schedule first">
-								<div class="inner">
-									<div class="icon">
-										<i class="fa fa-calendar"></i>
-									</div>
-									<div class="single-content">
+        {{-- editphoto --}}
+        <div class="col-12 text-center mb-5">
+            <div>
+                <div class="news-body">
+                    <div class="news-content">
+                        <div>
+                            <!-- Replace "Edit photo" button with file input -->
+                            <form action="{{ route('photos.update') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                <input type="file" name="photo" accept="image/*">
+                                <button type="submit" class="btn booknow2">Upload Photo</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Display the current photo -->
+                    <img src="img/cakes/cake1.jpeg" alt="#" class="mx-auto d-block" style="width: 500px; height: 500px;">
+                </div>
+            </div>
+        </div>
+        {{-- end editphoto --}}
 
-										<h4>Easter Egg</h4>
-										<p>Mini Photo sessions only $75 includes all digital images 20-30 min session March 14th - 28th full payment required</p>
-										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-12">
-							<!-- single-schedule -->
-							<div class="single-schedule middle">
-								<div class="inner">
-									<div class="icon">
-										<i class="icofont-prescription"></i>
-									</div>
-									<div class="single-content">
 
-                                        <h4>Services we provide</h4>
-                                            <ul style="color: #fff">
-                                                <li>-Cake, Desserts w/table setup</li>
-                                                <li>-Photobooth rental</li>
-                                                <li>-Customized backdrops</li>
-                                                <li>-Table,chairs & heater rentals</li>
-                                            </ul>
-										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-12 col-12">
-							<!-- single-schedule -->
-							<div class="single-schedule last">
-								<div class="inner">
-									<div class="icon">
-										<i class="icofont-ui-clock"></i>
-									</div>
-									<div class="single-content">
-										<span></span>
-										<h4>Event Hours</h4>
-										<ul class="time-sidual">
-											<li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
-											<li class="day">Saturday <span>9.00-18.30</span></li>
-											<li class="day">Monday - Thusday <span>9.00-15.00</span></li>
-										</ul>
-										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> --}}
-		<!--/End Start schedule Area -->
-
-		<!-- Start Feautes -->
-		{{-- <section class="Feautes section">
-			<div class="container">
-				<div class="row">
+        {{-- photobooth  --}}
+        <section class="projects-section" id="projects">
+            <div class="container px-4 px-lg-5">
+                <div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>We are always ready to assist with your events.</h2>
+							<h2>PHOTOBOOTH</h2>
 							<i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
-							<p>We can accommodate to planning your event from beginning to end</p>
+							<p>50% non refundable deposit required to book your date. All payments must be paid 5 days before event.
+                                Will accept all payment type. Zelle, Cashapp, Venmo, PayPal & cash.</p>
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-lg-4 col-12">
-						<!-- Start Single features -->
-						<div class="single-features">
-							<div class="signle-icon">
-								<i class="fa fa-gift"></i>
-							</div>
-							<h3>Celebration Event</h3>
-							<p>Let us make your celebration event unforgettable with our expert planning and attention to detail.</p>
-						</div>
-						<!-- End Single features -->
-					</div>
-					<div class="col-lg-4 col-12">
-						<!-- Start Single features -->
-						<div class="single-features">
-							<div class="signle-icon">
-								<i class="fa fa-birthday-cake"></i>
-							</div>
-							<h3>Birthday Event</h3>
-							<p>Make your birthday event truly special with our personalized planning and creative touches</p>
-						</div>
-						<!-- End Single features -->
-					</div>
-					<div class="col-lg-4 col-12">
-						<!-- Start Single features -->
-						<div class="single-features last">
-							<div class="signle-icon">
-								<i class="icofont-pigeon-2"></i>
-							</div>
-							<h3>Wedding Event</h3>
-							<p>Elevate your wedding event to new heights with our meticulous planning and unwavering dedication to creating your dream celebration.</p>
-						</div>
-						<!-- End Single features -->
-					</div>
-				</div>
-			</div>
-		</section> --}}
-		<!--/ End Feautes -->
-
-		<!-- Start service -->
-		{{-- <section class="services section">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>We Offer Different Services To Improve Your Health</h2>
-							<i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
-							<i class="icofont icofont-prescription"></i>
-							<h4><a href="service-details.html">General Treatment</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
-						</div>
-						<!-- End Single Service -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
-							<i class="icofont icofont-tooth"></i>
-							<h4><a href="service-details.html">Teeth Whitening</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
-						</div>
-						<!-- End Single Service -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
-							<i class="icofont icofont-heart-alt"></i>
-							<h4><a href="service-details.html">Heart Surgery</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
-						</div>
-						<!-- End Single Service -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
-							<i class="icofont icofont-listening"></i>
-							<h4><a href="service-details.html">Ear Treatment</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
-						</div>
-						<!-- End Single Service -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
-							<i class="icofont icofont-eye-alt"></i>
-							<h4><a href="service-details.html">Vision Problems</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
-						</div>
-						<!-- End Single Service -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
-							<i class="icofont icofont-blood"></i>
-							<h4><a href="service-details.html">Blood Transfusion</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>
-						</div>
-						<!-- End Single Service -->
-					</div>
-				</div>
-			</div>
-		</section> --}}
-		<!--/ End service -->
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="slideshow-container">
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth1.jpeg" alt="Slide 1" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth2.jpeg" alt="Slide 2" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth3.jpeg" alt="Slide 3" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth4.jpeg" alt="Slide 4" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth5.jpeg" alt="Slide 5" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth6.jpeg" alt="Slide 6" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth7.jpeg" alt="Slide 7" />
+                            </div>
+                        </div>
+                        <br>
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 system">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Photo Booth</h4>
+                            <p class="text-black-50 mb-2">
+                                <span style="color: green;">$350</span> 2 hrs minimum <br>
+                                <span style="color: green;">$100</span> every additional hour <br>
+                                Photo album keepsake <span style="color: green;">$100</span>
+                            </p>
+                            <h4>Photo booth Packages</h4>
+                            <p class="text-black-50 mb-5">
+                                Basic: 2 hrs <span style="color: green;">$350</span> <br>
+                                Vinyl backdrop <br>
+                            </p>
+                            <a href="{{ route('photobooth') }}" class="photobooth" style="color: #f7b2c9; font-size: 25px; margin-bottom: 20px;">
+                                LEARN MORE <i class="fa fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {{-- end photobooth  --}}
 
 		<!-- Pricing Table -->
 		<section class="pricing-table section">
@@ -453,70 +408,15 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>WE PROVIDE YOU WITH THE BEST EVENTS AT A REASONABLE PRICE</h2>
+							<h2>RENTALS</h2>
 							<i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
-							<p>Discover the unbeatable value of our premium events, meticulously curated to exceed your expectations while keeping costs within reach.
-                                Experience excellence without compromise - your dream event awaits!</p>
+							<p>50% non refundable deposit required to book your date. All payments must be paid 5 days before event.
+                                Will accept all payment type. Zelle, Cashapp, Venmo, PayPal & cash.</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="row">
-					<!-- Single Table -->
-					<div class="col-lg-4 col-md-12 col-12">
-						<div class="single-table">
-							<!-- Table Head -->
-							<div class="table-head">
-								<div class="icon">
-									<i class="icofont-cup-cake"></i>
-								</div>
-								<h4 class="title">Desserts </h4>
-								<div class="price">
-                                    <p class="amount">$317<span>/ Bundle Price</span></p>
-								</div>
-							</div>
-							<!-- Table List -->
-							<ul class="table-list">
-								<li><i class="icofont icofont-ui-check"></i>Cupcakes: $24 per dozen</li>
-								<li><i class="icofont icofont-ui-check"></i>Oreos: $24 per dozen</li>
-								<li><i class="icofont icofont-ui-check"></i>Cakecycles: $32 per dozen</li>
-								<li><i class="icofont icofont-ui-check"></i> Rice Krispies: $32 per dozen</li>
-							</ul>
-							<div class="table-bottom">
-								<a class="btn" href="#">Book Now</a>
-							</div>
-							<!-- Table Bottom -->
-						</div>
-					</div>
-					<!-- End Single Table-->
-					<!-- Single Table -->
-					<div class="col-lg-4 col-md-12 col-12">
-						<div class="single-table">
-							<!-- Table Head -->
-							<div class="table-head">
-								<div class="icon">
-									<i class="icofont-toy-ball"></i>
-								</div>
-								<h4 class="title">Balloon</h4>
-								<div class="price">
-									<p class="amount">$275<span>/ Bundle Price</span></p>
-								</div>
-							</div>
-							<!-- Table List -->
-							<ul class="table-list">
-								<li><i class="icofont icofont-ui-check"></i>Backdrop & stand $75</li>
-								<li><i class="icofont icofont-ui-check"></i>Curtain $50</li>
-								<li><i class="icofont icofont-ui-check"></i>Linens $7 ea minimum of 10</li>
-								<li><i class="icofont icofont-ui-check"></i>Animated Props $40</li>
-
-							</ul>
-							<div class="table-bottom">
-								<a class="btn" href="#">Book Now</a>
-							</div>
-							<!-- Table Bottom -->
-						</div>
-					</div>
-					<!-- End Single Table-->
 					<!-- Single Table -->
 					<div class="col-lg-4 col-md-12 col-12">
 						<div class="single-table">
@@ -525,20 +425,72 @@
 								<div class="icon">
 									<i class="icofont-dining-table"></i>
 								</div>
-								<h4 class="title">Rentals</h4>
+								<h4 class="title">Tables/chairs & bouncers</h4>
 								<div class="price">
-									<p class="amount">$1100<span>/ Bundle Price</span></p>
+                                    <p class="amount">$450</p>
 								</div>
 							</div>
 							<!-- Table List -->
 							<ul class="table-list">
-								<li><i class="icofont icofont-ui-check"></i>Pink water slide bouncer $300</li>
-								<li><i class="icofont icofont-ui-check"></i>Blue water slide bouncer $300</li>
-								<li><i class="icofont icofont-ui-check"></i>Wedding castles $400</li>
-								<li><i class="icofont icofont-ui-check"></i>Mechanical bull $350</li>
+								<li><i class="icofont icofont-ui-check"></i>4 tables 40  chairs <span style="color: #f7b2c9;">($196 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>Bouncer <span style="color: #f7b2c9;">($300)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>For a full day event</li>
 							</ul>
 							<div class="table-bottom">
-								<a class="btn" href="#">Book Now</a>
+								<a class="btn" href="{{ route('rentals') }}">LEARN MORE</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-industries-3"></i>
+								</div>
+								<h4 class="title">Intermediate</h4>
+								<div class="price">
+									<p class="amount">$700</p>
+								</div>
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>10 tables 100 chairs <span style="color: #f7b2c9;">($480 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>Bouncer <span style="color: #f7b2c9;">($300 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>For a full day event </li>
+
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="{{ route('rentals') }}">LEARN MORE</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-industries-4"></i>
+								</div>
+								<h4 class="title">Upscale</h4>
+								<div class="price">
+									<p class="amount">$1250</p>
+								</div>
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>20 tables 200 chairs <span style="color: #f7b2c9;">($960 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>Wedding bouncer <span style="color: #f7b2c9;">($400 value)</span></li>
+								<li><i class="icofont icofont-ui-check"></i>For a full day event</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="{{ route('rentals') }}">LEARN MORE</a>
 							</div>
 							<!-- Table Bottom -->
 						</div>
@@ -549,31 +501,31 @@
 		</section>
 		<!--/ End Pricing Table -->
 
-
-
-		<!-- Start Blog Area -->
+		<!-- Start cake Blog Area -->
 		<section class="blog section" id="blog">
 			<div class="container">
+                <div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>CAKES</h2>
+							<i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
+							<p>50% non refundable deposit required to book your date. All payments must be paid 5 days before event.
+                                Will accept all payment type. Zelle, Cashapp, Venmo, PayPal & cash.</p>
+						</div>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Single Blog -->
 						<div class="single-news">
 							<div class="news-head">
-								<img src="img/dslr.jpg" alt="#">
+								<img src="img/cakes/cake1.jpeg" alt="#">
 							</div>
 							<div class="news-body">
 								<div class="news-content">
                                     <div>
-                                        <a class="btn booknow2" href="#">Book Now</a>
+                                        <a class="btn booknow2" href="{{ route('cakes') }}">LEARN MORE</a>
                                     </div>
-                                    <h2><a href="blog-single.html">Photobooth</a></h2>
-                                    <ul class="table-list">
-                                        <li></i>sample price $123 sample price $123</li>
-                                        <li></i>sample price $123 sample price $123</li>
-                                        <li></i>sample price $123 sample price $123</li>
-                                        <li></i>sample price $123 sample price $123</li>
-                                    </ul>
-
 								</div>
 
 							</div>
@@ -584,21 +536,13 @@
 						<!-- Single Blog -->
 						<div class="single-news">
 							<div class="news-head">
-								<img src="img/project1.jpg" alt="#">
+								<img src="img/cakes/cake8.jpeg" alt="#">
 							</div>
 							<div class="news-body">
 								<div class="news-content">
 									<div>
-                                        <a class="btn booknow2" href="#">Book Now</a>
+                                        <a class="btn booknow2" href="{{ route('cakes') }}">LEARN MORE</a>
                                     </div>
-
-									<h2><a href="blog-single.html">Cake,desserts w/ table setup</a></h2>
-									<ul class="table-list">
-                                        <li></i>sample price $123 sample price $123</li>
-                                        <li></i>sample price $123 sample price $123</li>
-                                        <li></i>sample price $123 sample price $123</li>
-                                        <li></i>sample price $123 sample price $123</li>
-                                    </ul>
 								</div>
 							</div>
 						</div>
@@ -608,69 +552,24 @@
 						<!-- Single Blog -->
 						<div class="single-news">
 							<div class="news-head">
-								<img src="img/project2.jpg" alt="#">
+								<img src="img/cakes/cake9.jpeg" alt="#">
 							</div>
 							<div class="news-body">
 								<div class="news-content">
 									<div class="">
-                                        <a class="btn booknow2" href="#">Book Now</a>
+                                        <a class="btn booknow2" href="{{ route('cakes') }}">LEARN MORE</a>
                                     </div>
-									<h2><a href="blog-single.html">Custom balloon decor</a></h2>
-									<ul class="table-list">
-                                        <li></i>sample price $123 sample price $123</li>
-                                        <li></i>sample price $123 sample price $123</li>
-                                        <li></i>sample price $123 sample price $123</li>
-                                        <li></i>sample price $123 sample price $123</li>
-                                    </ul>
+
 								</div>
 							</div>
 						</div>
 						<!-- End Single Blog -->
 					</div>
+
 				</div>
 			</div>
 		</section>
-		<!-- End Blog Area -->
-
-		{{-- <!-- Start clients -->
-		<div class="clients overlay">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-12">
-						<div class="owl-carousel clients-slider">
-							<div class="single-clients">
-								<img src="img/client1.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client2.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client3.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client4.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client5.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client1.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client2.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client3.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client4.png" alt="#">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--/Ens clients --> --}}
+		<!-- End cake Blog Area -->
 
 		<!-- Start Appointment -->
 		<section class="appointment">
@@ -784,15 +683,6 @@
 								<p>We are a One Stop Shop! We can accommodate to planning your event from beginning to end.
                                     We offer Balloon artistry, dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals,
                                     Customized backdrops. Anything to make your event smoother & easier for you to enjoy! </p>
-								<!-- Social -->
-								<ul class="social">
-									<li><a href="#"><i class="icofont-facebook"></i></a></li>
-									<li><a href="#"><i class="icofont-google-plus"></i></a></li>
-									<li><a href="#"><i class="icofont-twitter"></i></a></li>
-									<li><a href="#"><i class="icofont-vimeo"></i></a></li>
-									<li><a href="#"><i class="icofont-pinterest"></i></a></li>
-								</ul>
-								<!-- End Social -->
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
@@ -801,53 +691,35 @@
 								<div class="row">
 									<div class="col-lg-6 col-md-6 col-12">
 										<ul>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-											<li><a href="#" id="about-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
-											<li><a href="#" id="services-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+											<li><a href="{{ url('/') }}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="{{ route('photobooth') }}" ><i class="fa fa-caret-right" aria-hidden="true"></i>Photobooth</a></li>
+											<li><a href="{{ route('rentals') }}" ><i class="fa fa-caret-right" aria-hidden="true"></i>Rentals</a></li>
+											<li><a href="{{ route('cakes') }}" ><i class="fa fa-caret-right" aria-hidden="true"></i>Cakes</a></li>
 										</ul>
 									</div>
-									{{-- <div class="col-lg-6 col-md-6 col-12">
-										<ul>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
-										</ul>
-									</div> --}}
+
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
-								<h2>Open Hours</h2>
-								<p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
+								<h2>Social Media</h2>
 								<ul class="time-sidual">
-									<li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
-									<li class="day">Saturday <span>9.00-18.30</span></li>
-									<li class="day">Monday - Thusday <span>9.00-15.00</span></li>
-								</ul>
+                                    <li><i class="fa fa-envelope"></i> <a href="mailto:@jsmemorableevents@yahoo.com">jsmemorableevents@yahoo.com</a></li>
+                                    <li><i class="icofont-instagram"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                    <li><i class="icofont-facebook"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                    <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFFFFF" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
+                                        <path fill="#FFFFFF" d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                                    </svg>
+                                      <a href="https://www.tiktok.com/@js_memorable_events">js_memorable_events</a></li>
+
+                                </ul>
 							</div>
 						</div>
 
 					</div>
 				</div>
-
 			</div>
-			<!--/ End Footer Top -->
-			<!-- Copyright -->
-			{{-- <div class="copyright">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-12">
-							<div class="copyright-content">
-								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> --}}
-			<!--/ End Copyright -->
 		</footer>
 		<!--/ End Footer Area -->
 
@@ -919,21 +791,29 @@
                 });
             });
         </script>
+        <script>
+            var slideIndex = 1;
+            photoSlides(slideIndex);
 
-{{-- <style>/* Hide main menu on mobile */
-    @media (max-width: 767px) {
-        .main-menu {
-            display: none;
-        }
-    }
-    </style>
-    <script>
-    $(document).ready(function(){
-        $('.menu-toggle').click(function(){
-            $('.main-menu').slideToggle();
-        });
-    });
-    </script> --}}
+            function plusSlides(n) {
+                photoSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                photoSlides(slideIndex = n);
+            }
+
+            function photoSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides0");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
+        </script>
 
     </body>
 </html>

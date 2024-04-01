@@ -95,7 +95,7 @@
         <div class="preloader"></div>
     </div>
 
-<!-- Header Area -->
+        <!-- Header Area -->
 		<header class="header" >
 			<!-- Topbar -->
 			<div class="topbar">
@@ -105,8 +105,8 @@
 						<div class="col-lg-12 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-                                <li><i class="fa fa-phone"></i>+123 1234 56789</li>
-                                <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">sample@yourmail.com</a></li>
+
+                                <li><i class="fa fa-envelope"></i><a href="mailto:jsmemorableevents@yahoo.com">jsmemorableevents@yahoo.com</a></li>
                                 <li><i class="icofont-instagram"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
                                 <li><i class="icofont-facebook"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
                                 <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC0CB" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
@@ -159,311 +159,287 @@
 					</div>
 				</div>
 			</div>
-			<!--/ End Header Inner -->
+		<!--/ End Header Inner -->
 		</header>
 		<!-- End Header Area -->
 
 
-<!-- Projects Section -->
-    <section class="projects-section bg-light" id="projects">
-        <div class="container px-4 px-lg-5">
-            <!-- Featured Project Row-->
-            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                <div class="col-xl-8 col-lg-7">
-                    <div class="slideshow-container">
-                        <div class="mySlides0">
-                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth1.jpeg" alt="Slide 1" />
+        <!-- Projects Section -->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7">
+                        <div class="slideshow-container">
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth1.jpeg" alt="Slide 1" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth2.jpeg" alt="Slide 2" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth3.jpeg" alt="Slide 3" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth4.jpeg" alt="Slide 4" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth5.jpeg" alt="Slide 5" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth6.jpeg" alt="Slide 6" />
+                            </div>
+                            <div class="mySlides0">
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth7.jpeg" alt="Slide 7" />
+                            </div>
                         </div>
-                        <div class="mySlides0">
-                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth2.jpeg" alt="Slide 2" />
-                        </div>
-                        <div class="mySlides0">
-                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth3.jpeg" alt="Slide 3" />
-                        </div>
-                        <div class="mySlides0">
-                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth4.jpeg" alt="Slide 4" />
-                        </div>
-                        <div class="mySlides0">
-                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth5.jpeg" alt="Slide 5" />
-                        </div>
-                        <div class="mySlides0">
-                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth6.jpeg" alt="Slide 6" />
-                        </div>
-                        <div class="mySlides0">
-                            <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth7.jpeg" alt="Slide 7" />
-                        </div>
+                        <br>
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
-                    <br>
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                <div class="col-xl-4 col-lg-5 system">
-                    <div class="featured-text text-center text-lg-left">
-                        <h4>Photo Booth</h4>
-                        <p class="text-black-50 mb-0">
-                            <span style="color: green;">$350</span> 2 hrs minimum <br>
-                            <span style="color: green;">$100</span> every additional hour <br>
-                            Photo album keepsake <span style="color: green;">$100</span>
-                        </p>
-                        <h4>Photo booth Packages</h4>
-                        <p class="text-black-50 mb-0">
-                            Basic: 2 hrs <span style="color: green;">$350</span> <br>
-                            Vinyl backdrop <br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project One Row-->
-            <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                <div class="col-lg-6 slideshow-container">
-                    <div class="mySlides">
-                        <img class="img-fluid" src="img/photobooth/intermediate1.jpeg" alt="Slide 1">
-                    </div>
-                    <div class="mySlides">
-                        <img class="img-fluid" src="img/photobooth/intermediate2.jpeg" alt="Slide 2">
-                    </div>
-                    <div class="mySlides">
-                        <img class="img-fluid" src="img/photobooth/intermediate3.jpeg" alt="Slide 3">
+                    <div class="col-xl-4 col-lg-5 system">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Photo Booth</h4>
+                            <p class="text-black-50 mb-0">
+                                <span style="color: green;">$350</span> 2 hrs minimum <br>
+                                <span style="color: green;">$100</span> every additional hour <br>
+                                Photo album keepsake <span style="color: green;">$100</span>
+                            </p>
+                            <h4>Photo booth Packages</h4>
+                            <p class="text-black-50 mb-0">
+                                Basic: 2 hrs <span style="color: green;">$350</span> <br>
+                                Vinyl backdrop <br>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-lg-6">
-                    <div class=" text-center h-100 project">
-                        <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto text-center text-lg-left">
-                                <h4 >Intermediate:</h4>
-                                <p style="font-size: 20px; color:#2d2e40;">
-                                    4 hrs  <span style="color: green;">$750</span> <br>
-                                    Memory book <span style="color: green;">($100 value)</span> <br>
-                                    Shimmer or Flower wall
-                                </p>
-                            </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6 slideshow-container">
+                        <div class="mySlides">
+                            <img class="img-fluid" src="img/photobooth/intermediate1.jpeg" alt="Slide 1">
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Project Two Row-->
-            <div class="row gx-0 justify-content-center">
-                <div class="col-lg-6 slideshow-container">
-                    <div class="mySlides2">
-                        <img class="img-fluid" src="img/photobooth/upscale5.jpeg" alt="Slide 1">
-                    </div>
-                    <!-- Add more slides here -->
-                    <div class="mySlides2">
-                        <img class="img-fluid" src="img/photobooth/upscale1.jpeg" alt="Slide 2">
+                        <div class="mySlides">
+                            <img class="img-fluid" src="img/photobooth/intermediate2.jpeg" alt="Slide 2">
+                        </div>
+                        <div class="mySlides">
+                            <img class="img-fluid" src="img/photobooth/intermediate3.jpeg" alt="Slide 3">
+                        </div>
                     </div>
 
-                    <div class="mySlides2">
-                        <img class="img-fluid" src="img/photobooth/upscale2.jpeg" alt="Slide 3">
-                    </div>
-                    <div class="mySlides2">
-                        <img class="img-fluid" src="img/photobooth/upscale3.jpeg" alt="Slide 4">
-                    </div>
-                    <div class="mySlides2">
-                        <img class="img-fluid" src="img/photobooth/upscale4.jpeg" alt="Slide 5">
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-first">
-                    <div class="text-center h-100 project">
-                        <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto text-center text-lg-right">
-                                <h4 class="text-black">Upscale:</h4>
-                                <p style="font-size: 20px; color:#2d2e40;">
-                                    5 hrs  <span style="color: green;">$1200</span> <br>
-                                    Memory book <span style="color: green;">($100 value)</span> <br>
-                                    Shimmer or Flower wall <br>
-                                    Balloon garland w/ customized props
-
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-<!-- Start Appointment -->
-<section class="appointment">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h2>We Are Always Ready to Help You. Book An Appointment</h2>
-                    <i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-12 col-12">
-                <form id="booking-form" class="form" action="{{ route('submit-form') }}" method="POST">
-                    @csrf
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Name:</label>
-                            <div class="form-group">
-                                <input name="name" type="text" placeholder="Name" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Email:</label>
-                            <div class="form-group">
-                                <input name="email" type="text" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Contact Number:</label>
-                            <div class="form-group">
-                                <input name="contact_number" type="tel" placeholder="Contact Number (e.g., +1 (123) 123-1234)" required>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Date of Event:</label>
-                            <div class="form-group">
-                                <input name="date" type="date" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Occasion:</label>
-                            <div class="form-group">
-                                <input name="occasion" type="text" placeholder="Occasion" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Time of Event:</label>
-                            <div class="form-group">
-                                <input name="time" type="time" placeholder="Time" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Theme Colors:</label>
-                            <div class="form-group">
-                                <input name="themecolors" type="text" placeholder="Theme Colors" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">People Count:</label>
-                            <div class="form-group">
-                                <input name="people" type="text" placeholder="How Many People" required>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12 col-12">
-                            <div class="form-group">
-                                <textarea name="message" placeholder="Please Specify exactly what is needed" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-5 col-md-4 col-12">
-                            <div class="form-group">
-                                <div class="button">
-                                    <button type="submit" class="btn">Book An Appointment</button>
+                    <div class="col-lg-6">
+                        <div class=" text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 >Intermediate:</h4>
+                                    <p style="font-size: 20px; color:#2d2e40;">
+                                        4 hrs  <span style="color: green;">$750</span> <br>
+                                        Memory book <span style="color: green;">($100 value)</span> <br>
+                                        Shimmer or Flower wall
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-7 col-md-8 col-12">
-                            @if(session('success_message'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('success_message') }}
-                            </div>
-                        @endif
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6 slideshow-container">
+                        <div class="mySlides2">
+                            <img class="img-fluid" src="img/photobooth/upscale5.jpeg" alt="Slide 1">
+                        </div>
+                        <!-- Add more slides here -->
+                        <div class="mySlides2">
+                            <img class="img-fluid" src="img/photobooth/upscale1.jpeg" alt="Slide 2">
+                        </div>
+
+                        <div class="mySlides2">
+                            <img class="img-fluid" src="img/photobooth/upscale2.jpeg" alt="Slide 3">
+                        </div>
+                        <div class="mySlides2">
+                            <img class="img-fluid" src="img/photobooth/upscale3.jpeg" alt="Slide 4">
+                        </div>
+                        <div class="mySlides2">
+                            <img class="img-fluid" src="img/photobooth/upscale4.jpeg" alt="Slide 5">
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="col-lg-6 col-md-12 ">
-                <div class="appointment-image">
-                    <img src="img/balloonss.png" alt="#">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Appointment -->
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-black">Upscale:</h4>
+                                    <p style="font-size: 20px; color:#2d2e40;">
+                                        5 hrs  <span style="color: green;">$1200</span> <br>
+                                        Memory book <span style="color: green;">($100 value)</span> <br>
+                                        Shimmer or Flower wall <br>
+                                        Balloon garland w/ customized props
 
-<!-- Footer Area -->
-<footer id="footer" class="footer ">
-    <!-- Footer Top -->
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer">
-                        <h2>About Us</h2>
-                        <p>We are a One Stop Shop! We can accommodate to planning your event from beginning to end.
-                            We offer Balloon artistry, dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals,
-                            Customized backdrops. Anything to make your event smoother & easier for you to enjoy! </p>
-                        <!-- Social -->
-                        <ul class="social">
-                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="#"><i class="icofont-google-plus"></i></a></li>
-                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="#"><i class="icofont-vimeo"></i></a></li>
-                            <li><a href="#"><i class="icofont-pinterest"></i></a></li>
-                        </ul>
-                        <!-- End Social -->
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer f-link">
-                        <h2>Quick Links</h2>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-                                    <li><a href="#" id="about-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
-                                    <li><a href="#" id="services-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
-                                </ul>
+                                    </p>
+
+                                </div>
                             </div>
-                            {{-- <div class="col-lg-6 col-md-6 col-12">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Finance</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
-                                </ul>
-                            </div> --}}
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer">
-                        <h2>Open Hours</h2>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
-                        <ul class="time-sidual">
-                            <li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
-                            <li class="day">Saturday <span>9.00-18.30</span></li>
-                            <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
-                        </ul>
+            </div>
+        </section>
+
+
+        <!-- Start Appointment -->
+        <section class="appointment">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>We Are Always Ready to Help You. Book An Appointment</h2>
+                            <i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
+                        </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-12">
+                        <form id="booking-form" class="form" action="{{ route('submit-form') }}" method="POST">
+                            @csrf
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Name:</label>
+                                    <div class="form-group">
+                                        <input name="name" type="text" placeholder="Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Email:</label>
+                                    <div class="form-group">
+                                        <input name="email" type="text" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Contact Number:</label>
+                                    <div class="form-group">
+                                        <input name="contact_number" type="tel" placeholder="Contact Number (e.g., +1 (123) 123-1234)" required>
+                                    </div>
+                                </div>
 
-            </div>
-        </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Date of Event:</label>
+                                    <div class="form-group">
+                                        <input name="date" type="date" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Occasion:</label>
+                                    <div class="form-group">
+                                        <input name="occasion" type="text" placeholder="Occasion" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Time of Event:</label>
+                                    <div class="form-group">
+                                        <input name="time" type="time" placeholder="Time" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">Theme Colors:</label>
+                                    <div class="form-group">
+                                        <input name="themecolors" type="text" placeholder="Theme Colors" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <label for="" style="color: #2d2e40;">People Count:</label>
+                                    <div class="form-group">
+                                        <input name="people" type="text" placeholder="How Many People" required>
+                                    </div>
+                                </div>
 
-    </div>
-    <!--/ End Footer Top -->
-    <!-- Copyright -->
-    {{-- <div class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-12">
-                    <div class="copyright-content">
-                        <p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <div class="form-group">
+                                        <textarea name="message" placeholder="Please Specify exactly what is needed" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-5 col-md-4 col-12">
+                                    <div class="form-group">
+                                        <div class="button">
+                                            <button type="submit" class="btn">Book An Appointment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-8 col-12">
+                                    @if(session('success_message'))
+                                    <div class="alert alert-success" role="alert">
+                                        {{ session('success_message') }}
+                                    </div>
+                                @endif
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-md-12 ">
+                        <div class="appointment-image">
+                            <img src="img/photobooth/cameranobg.png" alt="#">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div> --}}
-    <!--/ End Copyright -->
-</footer>
+        </section>
+        <!-- End Appointment -->
+
+        <!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>About Us</h2>
+								<p>We are a One Stop Shop! We can accommodate to planning your event from beginning to end.
+                                    We offer Balloon artistry, dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals,
+                                    Customized backdrops. Anything to make your event smoother & easier for you to enjoy! </p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer f-link">
+								<h2>Quick Links</h2>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="{{ url('/') }}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="{{ url('/') }}" id="about-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+
+											<li><a href="{{ route('photobooth') }}" ><i class="fa fa-caret-right" aria-hidden="true"></i>Photobooth</a></li>
+											<li><a href="{{ route('rentals') }}" ><i class="fa fa-caret-right" aria-hidden="true"></i>Rentals</a></li>
+											<li><a href="{{ route('cakes') }}" ><i class="fa fa-caret-right" aria-hidden="true"></i>Cakes</a></li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Social Media</h2>
+								<ul class="time-sidual">
+                                    <li><i class="fa fa-envelope"></i> <a href="mailto:@jsmemorableevents@yahoo.com">jsmemorableevents@yahoo.com</a></li>
+                                    <li><i class="icofont-instagram"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                    <li><i class="icofont-facebook"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                    <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFFFFF" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
+                                        <path fill="#FFFFFF" d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                                    </svg>
+                                      <a href="https://www.tiktok.com/@js_memorable_events">js_memorable_events</a></li>
+
+                                </ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--/ End Footer Area -->
 
 
 

@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\CustomerExportController;
 use App\Http\Controllers\CardController;
+use App\Http\Controllers\PhotoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,3 +23,5 @@ Route::get('/CustomerReportExport', [CustomerExportController::class, 'CustomerD
 Route::get('/Photobooth', [CardController::class, 'photobooth'])->name('photobooth');
 Route::get('/Rentals', [CardController::class, 'rentals'])->name('rentals');
 Route::get('/Cakes', [CardController::class, 'cakes'])->name('cakes');
+
+Route::post('/photos/update', [PhotoController::class, 'update'])->name('photos.update');

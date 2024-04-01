@@ -77,7 +77,14 @@
                 right: 0;
             }
 
-    </style>
+            .text-black-50 {
+                font-size: 16px;
+            }
+            .item {
+                cursor: pointer;
+                margin-bottom: 10px;
+            }
+        </style>
     </head>
 <body>
     <div class="preloader-container">
@@ -94,8 +101,8 @@
 						<div class="col-lg-12 col-md-7 col-12">
 							<!-- Top Contact -->
 							<ul class="top-contact">
-                                <li><i class="fa fa-phone"></i>+123 1234 56789</li>
-                                <li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">sample@yourmail.com</a></li>
+
+                                <li><i class="fa fa-envelope"></i><a href="mailto:jsmemorableevents@yahoo.com">jsmemorableevents@yahoo.com</a></li>
                                 <li><i class="icofont-instagram"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
                                 <li><i class="icofont-facebook"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
                                 <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC0CB" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
@@ -217,32 +224,33 @@
                 <div class="col-xl-4 col-lg-5 system">
                     <div class="featured-text text-center text-lg-left">
                         <h2 style="font-size: 40px; font-weight: bold;">Rentals</h2>
-                        <p class="text-black-50 mb-0">
-                            Pink water slide bouncer <span style="color: green;">$300</span> <br>
-                            Blue water slide bouncer <span style="color: green;">$300</span> <br>
-                            Wedding castles <span style="color: green;">$400</span> <br>
-                            Mechanical bull <span style="color: green;">$350</span> <br>
-                            Resin chairs <span style="color: green;">$4</span> each <br>
-                            Round tables <span style="color: green;">$10</span> each <br>
-                            Rectangle tables <span style="color: green;">$8</span> each <br>
-                            Bar tables <span style="color: green;">$7</span> each <br>
-                            Linens <span style="color: green;">$7</span> each minimum of 10 <br>
-                            Cake stands <span style="color: green;">$75</span> set <br>
-                            Walls <span style="color: green;">$75</span>  -
-                            Carriage <span style="color: green;">$150</span> <br>
-                            Flower wall <span style="color: green;">$200</span> -
-                            Cylinders <span style="color: green;">$75</span> <br>
-                            Kids table <span style="color: green;">$75</span> -
-                            Boho table <span style="color: green;">$75</span> <br>
-                            Flower arrangement <span style="color: green;">$75</span> -
-                            Sequence wall <span style="color: green;">$150</span> <br>
-                            Happy birthday light <span style="color: green;">$50</span> -
-                            Round stand <span style="color: green;">$75</span> <br>
-                            Balloon garland start at <span style="color: green;">$275</span> <br>
-                            Backdrop & stand <span style="color: green;">$75</span> <br>
-                            Curtain <span style="color: green;">$50</span> -
-                            Animated Props <span style="color: green;">$40</span> <br>
-                        </p>
+<p class="text-black-50 mb-0">
+<span class="item" data-price="300" data-image="img/rentals/rentals1.jpeg" data-toggle="modal" data-target="#myModal">Pink water slide bouncer</span> <span style="color: green;">$300</span> <br>
+<span class="item" data-price="300" data-image="img/rentals/rentals2.jpeg" data-toggle="modal" data-target="#myModal">Blue water slide bouncer</span> <span style="color: green;">$300</span> <br>
+<span class="item" data-price="400" data-image="img/rentals/rentals6.jpeg" data-toggle="modal" data-target="#myModal">Wedding castles</span> <span style="color: green;">$400</span> <br>
+<span class="item" data-price="350" data-image="img/rentals/rentals5.jpeg" data-toggle="modal" data-target="#myModal">Mechanical bull</span> <span style="color: green;">$350</span> <br>
+<span class="item" data-price="4" data-image="img/rentals/rentals11.jpeg" data-toggle="modal" data-target="#myModal">Resin chairs</span> <span style="color: green;">$4</span> each <br>
+<span class="item" data-price="10" data-image="img/rentals/rentals11.jpeg" data-toggle="modal" data-target="#myModal">Round tables</span> <span style="color: green;">$10</span> each <br>
+<span class="item" data-price="8" data-image="img/rentals/rentals11.jpeg" data-toggle="modal" data-target="#myModal">Rectangle tables</span> <span style="color: green;">$8</span> each <br>
+Bar tables <span style="color: green;">$7</span> each <br>
+Linens <span style="color: green;">$7</span> each minimum of 10 <br>
+Cake stands <span style="color: green;">$75</span> set <br>
+<span class="item" data-price="75" data-image="img/rentals/rentals7.jpeg" data-toggle="modal" data-target="#myModal">Walls</span> <span style="color: green;">$75</span>  -
+Carriage <span style="color: green;">$150</span> <br>
+Flower wall <span style="color: green;">$200</span> -
+<span class="item" data-price="75" data-image="img/rentals/rentals8.jpeg" data-toggle="modal" data-target="#myModal">Cylinders</span> <span style="color: green;">$75</span> <br>
+<span class="item" data-price="75" data-image="img/rentals/rentals9.jpeg" data-toggle="modal" data-target="#myModal">Kids table</span> <span style="color: green;">$75</span> -
+<span class="item" data-price="75" data-image="img/rentals/rentals9.jpeg" data-toggle="modal" data-target="#myModal">Boho table</span> <span style="color: green;">$75</span> <br>
+Flower arrangement <span style="color: green;">$75</span> -
+Sequence wall <span style="color: green;">$150</span> <br>
+Happy birthday light <span style="color: green;">$50</span> -
+Round stand <span style="color: green;">$75</span> <br>
+Balloon garland start at <span style="color: green;">$275</span> <br>
+Backdrop & stand <span style="color: green;">$75</span> <br>
+Curtain <span style="color: green;">$50</span> -
+Animated Props <span style="color: green;">$40</span> <br>
+</p>
+
                     </div>
                 </div>
             </div>
@@ -250,256 +258,276 @@
     </section>
 
     <!-- Pricing Table -->
-		<section class="pricing-table section">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>WE PROVIDE YOU WITH THE BEST EVENTS AT A REASONABLE PRICE</h2>
-							<i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
-							<p>Discover the unbeatable value of our premium events, meticulously curated to exceed your expectations while keeping costs within reach.
-                                Experience excellence without compromise - your dream event awaits!</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<!-- Single Table -->
-					<div class="col-lg-4 col-md-12 col-12">
-						<div class="single-table">
-							<!-- Table Head -->
-							<div class="table-head">
-								<div class="icon">
-									<i class="icofont-dining-table"></i>
-								</div>
-								<h4 class="title">Tables/chairs & bouncers</h4>
-								<div class="price">
-                                    <p class="amount">$450</p>
-								</div>
-							</div>
-							<!-- Table List -->
-							<ul class="table-list">
-								<li><i class="icofont icofont-ui-check"></i>4 tables 40  chairs <span style="color: #f7b2c9;">($196 value)</span></li>
-								<li><i class="icofont icofont-ui-check"></i>Bouncer <span style="color: #f7b2c9;">($300)</span></li>
-								<li><i class="icofont icofont-ui-check"></i>For a full day event</li>
-							</ul>
-							<div class="table-bottom">
-								<a class="btn" id="book-appointment1-btn" href="#">Book Now</a>
-							</div>
-							<!-- Table Bottom -->
-						</div>
-					</div>
-					<!-- End Single Table-->
-					<!-- Single Table -->
-					<div class="col-lg-4 col-md-12 col-12">
-						<div class="single-table">
-							<!-- Table Head -->
-							<div class="table-head">
-								<div class="icon">
-									<i class="icofont-industries-3"></i>
-								</div>
-								<h4 class="title">Intermediate</h4>
-								<div class="price">
-									<p class="amount">$700</p>
-								</div>
-							</div>
-							<!-- Table List -->
-							<ul class="table-list">
-								<li><i class="icofont icofont-ui-check"></i>10 tables 100 chairs <span style="color: #f7b2c9;">($480 value)</span></li>
-								<li><i class="icofont icofont-ui-check"></i>Bouncer <span style="color: #f7b2c9;">($300 value)</span></li>
-								<li><i class="icofont icofont-ui-check"></i>For a full day event </li>
-
-							</ul>
-							<div class="table-bottom">
-								<a class="btn" id="book-appointment2-btn" href="#">Book Now</a>
-							</div>
-							<!-- Table Bottom -->
-						</div>
-					</div>
-					<!-- End Single Table-->
-					<!-- Single Table -->
-					<div class="col-lg-4 col-md-12 col-12">
-						<div class="single-table">
-							<!-- Table Head -->
-							<div class="table-head">
-								<div class="icon">
-									<i class="icofont-industries-4"></i>
-								</div>
-								<h4 class="title">Upscale</h4>
-								<div class="price">
-									<p class="amount">$1250</p>
-								</div>
-							</div>
-							<!-- Table List -->
-							<ul class="table-list">
-								<li><i class="icofont icofont-ui-check"></i>20 tables 200 chairs <span style="color: #f7b2c9;">($960 value)</span></li>
-								<li><i class="icofont icofont-ui-check"></i>Wedding bouncer <span style="color: #f7b2c9;">($400 value)</span></li>
-								<li><i class="icofont icofont-ui-check"></i>For a full day event</li>
-							</ul>
-							<div class="table-bottom">
-								<a class="btn" id="book-appointment3-btn" href="#">Book Now</a>
-							</div>
-							<!-- Table Bottom -->
-						</div>
-					</div>
-					<!-- End Single Table-->
-				</div>
-			</div>
-		</section>
-		<!--/ End Pricing Table -->
-<!-- Start Appointment -->
-<section class="appointment">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h2>We Are Always Ready to Help You. Book An Appointment</h2>
-                    <i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
+    <section class="pricing-table section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>WE PROVIDE YOU WITH THE BEST EVENTS AT A REASONABLE PRICE</h2>
+                        <i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
+                        <p>50% non refundable deposit required to book your date. All payments must be paid 5 days before event.
+                            Will accept all payment type. Zelle, Cashapp, Venmo, PayPal & cash.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-md-12 col-12">
-                <form id="booking-form" class="form" action="{{ route('submit-form') }}" method="POST">
-                    @csrf
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Name:</label>
-                            <div class="form-group">
-                                <input name="name" type="text" placeholder="Name" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Email:</label>
-                            <div class="form-group">
-                                <input name="email" type="text" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Contact Number:</label>
-                            <div class="form-group">
-                                <input name="contact_number" type="tel" placeholder="Contact Number (e.g., +1 (123) 123-1234)" required>
-                            </div>
-                        </div>
 
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Date of Event:</label>
-                            <div class="form-group">
-                                <input name="date" type="date" required>
+            <div class="row">
+                <!-- Single Table -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="single-table">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="icon">
+                                <i class="icofont-dining-table"></i>
+                            </div>
+                            <h4 class="title">Tables/chairs & bouncers</h4>
+                            <div class="price">
+                                <p class="amount">$450</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Occasion:</label>
-                            <div class="form-group">
-                                <input name="occasion" type="text" placeholder="Occasion" required>
-                            </div>
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li><i class="icofont icofont-ui-check"></i>4 tables 40  chairs <span style="color: #f7b2c9;">($196 value)</span></li>
+                            <li><i class="icofont icofont-ui-check"></i>Bouncer <span style="color: #f7b2c9;">($300)</span></li>
+                            <li><i class="icofont icofont-ui-check"></i>For a full day event</li>
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" id="book-appointment1-btn" href="#">Book Now</a>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Time of Event:</label>
-                            <div class="form-group">
-                                <input name="time" type="time" placeholder="Time" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">Theme Colors:</label>
-                            <div class="form-group">
-                                <input name="themecolors" type="text" placeholder="Theme Colors" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <label for="" style="color: #2d2e40;">People Count:</label>
-                            <div class="form-group">
-                                <input name="people" type="text" placeholder="How Many People" required>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-12 col-md-12 col-12">
-                            <div class="form-group">
-                                <textarea name="message" placeholder="Please Specify exactly what is needed" required></textarea>
-                            </div>
-                        </div>
+                        <!-- Table Bottom -->
                     </div>
-                    <div class="row">
-                        <div class="col-lg-5 col-md-4 col-12">
-                            <div class="form-group">
-                                <div class="button">
-                                    <button type="submit" class="btn">Book An Appointment</button>
+                </div>
+                <!-- End Single Table-->
+                <!-- Single Table -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="single-table">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="icon">
+                                <i class="icofont-industries-3"></i>
+                            </div>
+                            <h4 class="title">Intermediate</h4>
+                            <div class="price">
+                                <p class="amount">$700</p>
+                            </div>
+                        </div>
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li><i class="icofont icofont-ui-check"></i>10 tables 100 chairs <span style="color: #f7b2c9;">($480 value)</span></li>
+                            <li><i class="icofont icofont-ui-check"></i>Bouncer <span style="color: #f7b2c9;">($300 value)</span></li>
+                            <li><i class="icofont icofont-ui-check"></i>For a full day event </li>
+
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" id="book-appointment2-btn" href="#">Book Now</a>
+                        </div>
+                        <!-- Table Bottom -->
+                    </div>
+                </div>
+                <!-- End Single Table-->
+                <!-- Single Table -->
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="single-table">
+                        <!-- Table Head -->
+                        <div class="table-head">
+                            <div class="icon">
+                                <i class="icofont-industries-4"></i>
+                            </div>
+                            <h4 class="title">Upscale</h4>
+                            <div class="price">
+                                <p class="amount">$1250</p>
+                            </div>
+                        </div>
+                        <!-- Table List -->
+                        <ul class="table-list">
+                            <li><i class="icofont icofont-ui-check"></i>20 tables 200 chairs <span style="color: #f7b2c9;">($960 value)</span></li>
+                            <li><i class="icofont icofont-ui-check"></i>Wedding bouncer <span style="color: #f7b2c9;">($400 value)</span></li>
+                            <li><i class="icofont icofont-ui-check"></i>For a full day event</li>
+                        </ul>
+                        <div class="table-bottom">
+                            <a class="btn" id="book-appointment3-btn" href="#">Book Now</a>
+                        </div>
+                        <!-- Table Bottom -->
+                    </div>
+                </div>
+                <!-- End Single Table-->
+            </div>
+        </div>
+    </section>
+    <!--/ End Pricing Table -->
+
+    <!-- Start Appointment -->
+    <section class="appointment">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>We Are Always Ready to Help You. Book An Appointment</h2>
+                        <i class="fa fa-gift" aria-hidden="true" style="color: pink; font-size: 35px;"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-12">
+                    <form id="booking-form" class="form" action="{{ route('submit-form') }}" method="POST">
+                        @csrf
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label for="" style="color: #2d2e40;">Name:</label>
+                                <div class="form-group">
+                                    <input name="name" type="text" placeholder="Name" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label for="" style="color: #2d2e40;">Email:</label>
+                                <div class="form-group">
+                                    <input name="email" type="text" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label for="" style="color: #2d2e40;">Contact Number:</label>
+                                <div class="form-group">
+                                    <input name="contact_number" type="tel" placeholder="Contact Number (e.g., +1 (123) 123-1234)" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label for="" style="color: #2d2e40;">Date of Event:</label>
+                                <div class="form-group">
+                                    <input name="date" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label for="" style="color: #2d2e40;">Occasion:</label>
+                                <div class="form-group">
+                                    <input name="occasion" type="text" placeholder="Occasion" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label for="" style="color: #2d2e40;">Time of Event:</label>
+                                <div class="form-group">
+                                    <input name="time" type="time" placeholder="Time" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label for="" style="color: #2d2e40;">Theme Colors:</label>
+                                <div class="form-group">
+                                    <input name="themecolors" type="text" placeholder="Theme Colors" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <label for="" style="color: #2d2e40;">People Count:</label>
+                                <div class="form-group">
+                                    <input name="people" type="text" placeholder="How Many People" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-12">
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Please Specify exactly what is needed" required></textarea>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-7 col-md-8 col-12">
-                            @if(session('success_message'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('success_message') }}
-                            </div>
-                        @endif
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-6 col-md-12 ">
-                <div class="appointment-image">
-                    <img src="img/balloonss.png" alt="#">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Appointment -->
-<!-- Footer Area -->
-<footer id="footer" class="footer ">
-    <!-- Footer Top -->
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer">
-                        <h2>About Us</h2>
-                        <p>We are a One Stop Shop! We can accommodate to planning your event from beginning to end.
-                            We offer Balloon artistry, dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals,
-                            Customized backdrops. Anything to make your event smoother & easier for you to enjoy! </p>
-                        <!-- Social -->
-                        <ul class="social">
-                            <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                            <li><a href="#"><i class="icofont-google-plus"></i></a></li>
-                            <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                            <li><a href="#"><i class="icofont-vimeo"></i></a></li>
-                            <li><a href="#"><i class="icofont-pinterest"></i></a></li>
-                        </ul>
-                        <!-- End Social -->
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer f-link">
-                        <h2>Quick Links</h2>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-                                    <li><a href="#" id="about-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
-                                    <li><a href="#" id="services-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
-                                </ul>
+                            <div class="col-lg-5 col-md-4 col-12">
+                                <div class="form-group">
+                                    <div class="button">
+                                        <button type="submit" class="btn">Book An Appointment</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-8 col-12">
+                                @if(session('success_message'))
+                                <div class="alert alert-success" role="alert">
+                                    {{ session('success_message') }}
+                                </div>
+                            @endif
                             </div>
                         </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-12 ">
+                    <div class="appointment-image">
+                        <img src="img/balloonss.png" alt="#">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                    <div class="single-footer">
-                        <h2>Open Hours</h2>
-                        <p>Lorem ipsum dolor sit ame consectetur adipisicing elit do eiusmod tempor incididunt.</p>
-                        <ul class="time-sidual">
-                            <li class="day">Monday - Fridayp <span>8.00-20.00</span></li>
-                            <li class="day">Saturday <span>9.00-18.30</span></li>
-                            <li class="day">Monday - Thusday <span>9.00-15.00</span></li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
         </div>
+    </section>
+    <!-- End Appointment -->
 
+    <!-- Footer Area -->
+		<footer id="footer" class="footer ">
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>About Us</h2>
+								<p>We are a One Stop Shop! We can accommodate to planning your event from beginning to end.
+                                    We offer Balloon artistry, dessert table set up, Cakes & desserts, Photobooth rental, Bouncers,Tables/Chair rentals,
+                                    Customized backdrops. Anything to make your event smoother & easier for you to enjoy! </p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer f-link">
+								<h2>Quick Links</h2>
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-12">
+										<ul>
+											<li><a href="{{ url('/') }}"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+											<li><a href="{{ url('/') }}" id="about-footer"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+											<li><a href="{{ route('photobooth') }}" ><i class="fa fa-caret-right" aria-hidden="true"></i>Photobooth</a></li>
+											<li><a href="{{ route('rentals') }}" ><i class="fa fa-caret-right" aria-hidden="true"></i>Rentals</a></li>
+											<li><a href="{{ route('cakes') }}" ><i class="fa fa-caret-right" aria-hidden="true"></i>Cakes</a></li>
+										</ul>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-12">
+							<div class="single-footer">
+								<h2>Social Media</h2>
+								<ul class="time-sidual">
+                                    <li><i class="fa fa-envelope"></i> <a href="mailto:@jsmemorableevents@yahoo.com">jsmemorableevents@yahoo.com</a></li>
+                                    <li><i class="icofont-instagram"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                    <li><i class="icofont-facebook"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                    <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFFFFF" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
+                                        <path fill="#FFFFFF" d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                                    </svg>
+                                      <a href="https://www.tiktok.com/@js_memorable_events">js_memorable_events</a></li>
+
+                                </ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</footer>
+	<!--/ End Footer Area -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Item Image</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="Item Image">
+                </div>
+            </div>
+        </div>
     </div>
-</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- jquery Min JS -->
 <script src="js/jquery.min.js"></script>
@@ -556,6 +584,46 @@
         slides[slideIndex - 1].style.display = "block";
 
     }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+            // Get all elements with the 'item' class
+            const items = document.querySelectorAll('.item');
+
+            // Loop through each item and add click event listener
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    const price = item.dataset.price;
+                    const itemName = item.textContent.trim();
+                    const imageURL = item.dataset.image;
+
+                    // Create and display the image
+                    const img = document.createElement('img');
+                    img.src = imageURL;
+                    img.alt = itemName;
+                    document.getElementById('output').innerHTML = '';
+                    document.getElementById('output').appendChild(img);
+                });
+            });
+        });
+</script>
+<script>
+    // Get all elements with the 'item' class
+    const items = document.querySelectorAll('.item');
+
+    // Loop through each item and add click event listener
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            const price = item.dataset.price;
+            const itemName = item.textContent.trim();
+            const imageURL = item.dataset.image;
+
+            // Set image source and title in modal
+            document.getElementById('modalImage').src = imageURL;
+            document.getElementById('myModalLabel').textContent = itemName + ' - $' + price;
+        });
+    });
 </script>
 </body>
 </html>
