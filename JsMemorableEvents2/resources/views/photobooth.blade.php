@@ -108,7 +108,7 @@
 
                                 <li><i class="fa fa-envelope"></i><a href="mailto:jsmemorableevents@yahoo.com">jsmemorableevents@yahoo.com</a></li>
                                 <li><i class="icofont-instagram"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
-                                <li><i class="icofont-facebook"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                <li><i class="icofont-facebook"></i><a href="https://www.facebook.com/profile.php?id=61556888671445">js_memorable_events</a></li>
                                 <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC0CB" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
                                     <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
                                         </svg>
@@ -172,25 +172,22 @@
                     <div class="col-xl-8 col-lg-7">
                         <div class="slideshow-container">
                             <div class="mySlides0">
-                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth1.jpeg" alt="Slide 1" />
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth4.jpeg" alt="Slide 1" />
                             </div>
                             <div class="mySlides0">
                                 <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth2.jpeg" alt="Slide 2" />
                             </div>
                             <div class="mySlides0">
-                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth3.jpeg" alt="Slide 3" />
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth1.jpeg" alt="Slide 3" />
                             </div>
                             <div class="mySlides0">
-                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth4.jpeg" alt="Slide 4" />
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth3.jpeg" alt="Slide 4" />
                             </div>
                             <div class="mySlides0">
-                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth5.jpeg" alt="Slide 5" />
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth6.jpeg" alt="Slide 5" />
                             </div>
                             <div class="mySlides0">
-                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth6.jpeg" alt="Slide 6" />
-                            </div>
-                            <div class="mySlides0">
-                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth7.jpeg" alt="Slide 7" />
+                                <img class="img-fluid mb-3 mb-lg-0" src="img/photobooth/photobooth7.jpeg" alt="Slide 6" />
                             </div>
                         </div>
                         <br>
@@ -425,7 +422,7 @@
 								<ul class="time-sidual">
                                     <li><i class="fa fa-envelope"></i> <a href="mailto:@jsmemorableevents@yahoo.com">jsmemorableevents@yahoo.com</a></li>
                                     <li><i class="icofont-instagram"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
-                                    <li><i class="icofont-facebook"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                    <li><i class="icofont-facebook"></i> <a href="https://www.facebook.com/profile.php?id=61556888671445">js_memorable_events</a></li>
                                     <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFFFFF" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
                                         <path fill="#FFFFFF" d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
                                     </svg>
@@ -494,8 +491,6 @@
         setTimeout(showSlides2, 3000);
     }
 </script>
-
-
 <script>
     var slideIndex = 1;
     photoSlides(slideIndex);

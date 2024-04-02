@@ -104,7 +104,7 @@
 
                                 <li><i class="fa fa-envelope"></i><a href="mailto:jsmemorableevents@yahoo.com">jsmemorableevents@yahoo.com</a></li>
                                 <li><i class="icofont-instagram"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
-                                <li><i class="icofont-facebook"></i><a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                <li><i class="icofont-facebook"></i><a href="https://www.facebook.com/profile.php?id=61556888671445">js_memorable_events</a></li>
                                 <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFC0CB" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
                                     <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
                                         </svg>
@@ -225,30 +225,31 @@
                     <div class="featured-text text-center text-lg-left">
                         <h2 style="font-size: 40px; font-weight: bold;">Rentals</h2>
 <p class="text-black-50 mb-0">
-<span class="item" data-price="300" data-image="img/rentals/rentals1.jpeg" data-toggle="modal" data-target="#myModal">Pink water slide bouncer</span> <span style="color: green;">$300</span> <br>
-<span class="item" data-price="300" data-image="img/rentals/rentals2.jpeg" data-toggle="modal" data-target="#myModal">Blue water slide bouncer</span> <span style="color: green;">$300</span> <br>
-<span class="item" data-price="400" data-image="img/rentals/rentals6.jpeg" data-toggle="modal" data-target="#myModal">Wedding castles</span> <span style="color: green;">$400</span> <br>
-<span class="item" data-price="350" data-image="img/rentals/rentals5.jpeg" data-toggle="modal" data-target="#myModal">Mechanical bull</span> <span style="color: green;">$350</span> <br>
-<span class="item" data-price="4" data-image="img/rentals/rentals11.jpeg" data-toggle="modal" data-target="#myModal">Resin chairs</span> <span style="color: green;">$4</span> each <br>
-<span class="item" data-price="10" data-image="img/rentals/rentals11.jpeg" data-toggle="modal" data-target="#myModal">Round tables</span> <span style="color: green;">$10</span> each <br>
-<span class="item" data-price="8" data-image="img/rentals/rentals11.jpeg" data-toggle="modal" data-target="#myModal">Rectangle tables</span> <span style="color: green;">$8</span> each <br>
-Bar tables <span style="color: green;">$7</span> each <br>
-Linens <span style="color: green;">$7</span> each minimum of 10 <br>
-Cake stands <span style="color: green;">$75</span> set <br>
-<span class="item" data-price="75" data-image="img/rentals/rentals7.jpeg" data-toggle="modal" data-target="#myModal">Walls</span> <span style="color: green;">$75</span>  -
-Carriage <span style="color: green;">$150</span> <br>
-Flower wall <span style="color: green;">$200</span> -
-<span class="item" data-price="75" data-image="img/rentals/rentals8.jpeg" data-toggle="modal" data-target="#myModal">Cylinders</span> <span style="color: green;">$75</span> <br>
-<span class="item" data-price="75" data-image="img/rentals/rentals9.jpeg" data-toggle="modal" data-target="#myModal">Kids table</span> <span style="color: green;">$75</span> -
-<span class="item" data-price="75" data-image="img/rentals/rentals9.jpeg" data-toggle="modal" data-target="#myModal">Boho table</span> <span style="color: green;">$75</span> <br>
-Flower arrangement <span style="color: green;">$75</span> -
-Sequence wall <span style="color: green;">$150</span> <br>
-Happy birthday light <span style="color: green;">$50</span> -
-Round stand <span style="color: green;">$75</span> <br>
-Balloon garland start at <span style="color: green;">$275</span> <br>
-Backdrop & stand <span style="color: green;">$75</span> <br>
-Curtain <span style="color: green;">$50</span> -
-Animated Props <span style="color: green;">$40</span> <br>
+    <span class="item" data-price="300" data-image="img/rentals/rentals1.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Pink water slide bouncer</u></strong></span> <span style="color: green;">$300</span> <br>
+    <span class="item" data-price="300" data-image="img/rentals/rentals2.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Blue water slide bouncer</u></strong></span> <span style="color: green;">$300</span> <br>
+    <span class="item" data-price="400" data-image="img/rentals/rentals6.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Wedding castles</u></strong></span> <span style="color: green;">$400</span> <br>
+    <span class="item" data-price="350" data-image="img/rentals/rentals5.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Mechanical bull</u></strong></span> <span style="color: green;">$350</span> <br>
+    <span class="item" data-price="4" data-image="img/rentals/rentals11.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Resin chairs</u></strong></span> <span style="color: green;">$4</span> each <br>
+    <span class="item" data-price="10" data-image="img/rentals/rentals11.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Round tables</u></strong></span> <span style="color: green;">$10</span> each <br>
+    <span class="item" data-price="8" data-image="img/rentals/rentals11.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Rectangle tables</u></strong></span> <span style="color: green;">$8</span> each <br>
+    <strong><u>Bar tables</u></strong> <span style="color: green;">$7</span> each <br>
+    <strong><u>Linens</u></strong> <span style="color: green;">$7</span> each minimum of 10 <br>
+    <strong><u>Cake stands</u></strong> <span style="color: green;">$75</span> set <br>
+    <span class="item" data-price="75" data-image="img/rentals/rentals7.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Walls</u></strong></span> <span style="color: green;">$75</span> <br>
+    <strong><u>Carriage</u></strong> <span style="color: green;">$150</span> <br>
+    <strong><u>Flower wall</u></strong> <span style="color: green;">$200</span> <br>
+    <span class="item" data-price="75" data-image="img/rentals/rentals8.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Cylinders</u></strong></span> <span style="color: green;">$75</span> <br>
+    <span class="item" data-price="75" data-image="img/rentals/rentals9.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Kids table</u></strong></span> <span style="color: green;">$75</span> <br>
+    <span class="item" data-price="75" data-image="img/rentals/rentals9.jpeg" data-toggle="modal" data-target="#myModal"><strong><u>Boho table</u></strong></span> <span style="color: green;">$75</span> <br>
+    <strong><u>Flower arrangement</u></strong> <span style="color: green;">$75</span> <br>
+    <strong><u>Sequence wall</u></strong> <span style="color: green;">$150</span> <br>
+    <strong><u>Happy birthday light</u></strong> <span style="color: green;">$50</span> <br>
+    <strong><u>Round stand</u></strong> <span style="color: green;">$75</span> <br>
+    <strong><u>Balloon garland</u></strong> start at <span style="color: green;">$275</span> <br>
+    <strong><u>Backdrop & stand</u></strong> <span style="color: green;">$75</span> <br>
+    <strong><u>Curtain</u></strong> <span style="color: green;">$50</span> <br>
+    <strong><u>Animated Props</u></strong> <span style="color: green;">$40</span> <br>
+
 </p>
 
                     </div>
@@ -493,7 +494,7 @@ Animated Props <span style="color: green;">$40</span> <br>
 								<ul class="time-sidual">
                                     <li><i class="fa fa-envelope"></i> <a href="mailto:@jsmemorableevents@yahoo.com">jsmemorableevents@yahoo.com</a></li>
                                     <li><i class="icofont-instagram"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
-                                    <li><i class="icofont-facebook"></i> <a href="https://www.instagram.com/js_memorable_events/">js_memorable_events</a></li>
+                                    <li><i class="icofont-facebook"></i> <a href="https://www.facebook.com/profile.php?id=61556888671445">js_memorable_events</a></li>
                                     <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFFFFF" class="bi bi-tiktok" viewBox="0 0 16 16" style="vertical-align: text-bottom;">
                                         <path fill="#FFFFFF" d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
                                     </svg>
