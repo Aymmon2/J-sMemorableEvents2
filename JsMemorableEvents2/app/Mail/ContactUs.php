@@ -29,8 +29,8 @@ class ContactUs extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Enquiry',
-            from: new Address('eaymmon@gmail.com','Js Memorable Event Website'),
+            subject: 'New Book Appointment',
+            from: new Address('jsmemorableevents@gmail.com','Js Memorable Event Website'),
         );
     }
 

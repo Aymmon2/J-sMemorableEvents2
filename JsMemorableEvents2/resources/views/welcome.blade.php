@@ -90,6 +90,17 @@
                 height: 400px;
                 object-fit: cover;
             }
+
+
+
+    /* Adjust padding for smaller screens */
+    @media (max-width: 768px) {
+        .why-choose {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    }
+
         </style>
     </head>
     <body>
@@ -312,29 +323,33 @@
         </div>
         {{-- 3 card end --}}
 
-        {{-- editphoto --}}
-        <div class="col-12 text-center mb-5">
-            <div>
-                <div class="news-body">
-                    <div class="news-content">
-                        <div>
-                            <!-- Replace "Edit photo" button with file input -->
-                            <form action="{{ route('photos.update') }}" method="POST" enctype="multipart/form-data">
-                                @csrf
-                                <input type="file" name="photo" accept="image/*">
-                                <button type="submit" class="btn booknow2">Upload Photo</button>
-                            </form>
+        <!-- Start Why choose -->
+		<section class="why-choose section">
+            <div class="container">
+                <div class="row justify-content-center"> <!-- Centering the row -->
+                    <div class="col-lg-12">
+                        <div class="section-title">
+                            <h2>Easter memories captured forever!</h2>
+                            <p>Book your mini photo session for only $75, including all digital images.
+                                Hurry, limited slots available from March 14th to 28th.
+                                DM to secure your spot - full payment required.</p>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <!-- Display the current photo -->
-                    <img src="img/cakes/cake1.jpeg" alt="#" class="mx-auto d-block" style="width: 500px; height: 500px;">
+
+                    <div class="col-lg-6 col-12">
+                        <!-- Start Choose Rights -->
+                        <div class="season-photo text-center"> <!-- Centering the content within the column -->
+                            <div class="season-image">
+                                <img src="img/easteregg.PNG" style="max-width: 100%; max-height: 500px;" class="mx-auto">
+                            </div>
+                        </div>
+                        <!-- End Choose Rights -->
+                    </div>
                 </div>
             </div>
-        </div>
-        {{-- end editphoto --}}
+        </section>
 
+		<!--/ End Why choose -->
 
         {{-- photobooth  --}}
         <section class="projects-section" id="projects">
