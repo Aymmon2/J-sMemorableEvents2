@@ -14,6 +14,7 @@ use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use Maatwebsite\Excel\Events\AfterSheet;
 use Maatwebsite\Excel\Concerns\WithEvents;
 use PhpOffice\PhpSpreadsheet\Style\Border;
+use Carbon\Carbon;
 
 class CustomerDataExport implements FromCollection, WithHeadings, WithStyles, WithMapping, ShouldAutoSize, WithEvents
 {
@@ -38,7 +39,7 @@ class CustomerDataExport implements FromCollection, WithHeadings, WithStyles, Wi
     public function headings(): array
     {
         return [
-        'CUSTOMER ENQUIRY DATA'
+        'CUSTOMER BOOK APPOINTMENT DATA'
         ];
 
     }
@@ -47,24 +48,26 @@ class CustomerDataExport implements FromCollection, WithHeadings, WithStyles, Wi
     {
         return [
             AfterSheet::class => function (AfterSheet $event) {
-            $event->sheet->getDelegate()->mergeCells('A1:H1');
+            $event->sheet->getDelegate()->mergeCells('A1:J1');
             $event->sheet->getDelegate()->getRowDimension(1)->setRowHeight(30);
 
             $event->sheet->getDelegate()->insertNewRowBefore(2);
             $event->sheet->getDelegate()->setCellValue('A2', 'DATE ENQUIRY');
             $event->sheet->getDelegate()->setCellValue('B2', 'NAME');
-            $event->sheet->getDelegate()->setCellValue('C2', 'DATE OF EVENT');
-            $event->sheet->getDelegate()->setCellValue('D2', 'TIME OF EVENT');
-            $event->sheet->getDelegate()->setCellValue('E2', 'OCCASION');
-            $event->sheet->getDelegate()->setCellValue('F2', 'THEME COLORS');
-            $event->sheet->getDelegate()->setCellValue('G2', 'PEOPLE COUNT');
-            $event->sheet->getDelegate()->setCellValue('H2', 'MESSAGE');
+            $event->sheet->getDelegate()->setCellValue('C2', 'EMAIL');
+            $event->sheet->getDelegate()->setCellValue('D2', 'CONTACT NUMBER');
+            $event->sheet->getDelegate()->setCellValue('E2', 'DATE OF EVENT');
+            $event->sheet->getDelegate()->setCellValue('F2', 'TIME OF EVENT');
+            $event->sheet->getDelegate()->setCellValue('G2', 'OCCASION');
+            $event->sheet->getDelegate()->setCellValue('H2', 'THEME COLORS');
+            $event->sheet->getDelegate()->setCellValue('I2', 'PEOPLE COUNT');
+            $event->sheet->getDelegate()->setCellValue('J2', 'MESSAGE');
 
 
 
 
                 // Apply borders to cells
-                $cellRange = 'A2:H2'; // Range of cells to apply borders
+                $cellRange = 'A2:J2'; // Range of cells to apply borders
                 $event->sheet->getDelegate()->getStyle($cellRange)->applyFromArray([
                     'borders' => [
                         'allBorders' => [
@@ -79,12 +82,14 @@ class CustomerDataExport implements FromCollection, WithHeadings, WithStyles, Wi
 
     public function map($row): array
     {
-
+        $dateTime = Carbon::parse($row->date . ' ' . $row->time);
         return [
             $row->created_at->format('F-d-Y'),
             $row->name,
-            $row->date,
-            $row->time,
+            $row->email,
+            $row->contact_number,
+            $dateTime->format('F-d-Y'), // Date
+            $dateTime->format('h:i A'), // Time
             $row->occasion,
             $row->themecolors,
             $row->people,
@@ -94,7 +99,7 @@ class CustomerDataExport implements FromCollection, WithHeadings, WithStyles, Wi
 
     public function styles(Worksheet $sheet)
     {
-        $sheet->getStyle('A1:H1')->applyFromArray([
+        $sheet->getStyle('A1:J1')->applyFromArray([
             'fill' => [
                 'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID,
                 'startColor' => ['rgb' => 'f7b2c9'], // baby pink

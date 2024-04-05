@@ -28,7 +28,7 @@ class FormController extends Controller
         AppointmentRequest::create($data);
 
         // Send email
-        Mail::to('garenacoms@gmail.com')->send(new ContactUs($data));
+        Mail::to('jsmemorableevents@yahoo.com')->send(new ContactUs($data));
 
         // Redirect back with a success message
         return redirect()->back()->with('success_message', 'Thank you for your inquiry! We will confirm by email.');

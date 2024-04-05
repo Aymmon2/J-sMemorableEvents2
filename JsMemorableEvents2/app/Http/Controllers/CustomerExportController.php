@@ -34,6 +34,6 @@ class CustomerExportController extends Controller
             $startDate = now()->startOfMonth()->format('Y-m-d');
             $endDate = now()->endOfMonth()->format('Y-m-d');
         }
-        return Excel::download(new CustomerDataExport($startDate, $endDate), 'CustomerEnquiry.xlsx');
+        return Excel::download(new CustomerDataExport($startDate, $endDate), 'Book Appointment Record.xlsx');
     }
 }
