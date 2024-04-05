@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         // Create a single user account
         User::create([
             'username' => 'admin',
-            'password' => Hash::make('12345678'),
+            'password' => Hash::make('jsmemorableevents'),
         ]);
     }
 }
